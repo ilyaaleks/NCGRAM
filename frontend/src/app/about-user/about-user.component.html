@@ -1,0 +1,30 @@
+<div class="row" style="margin-top:5em">
+  <div class="col-sm-3 d-inline ml-5">
+    <img class="img-fluid rounded d-inline" [src]="user.photoUrl" style="max-width: 10em;"/>
+  </div>
+
+  <div class="cols-sm-8 float-left ml-4">
+    <p class="text-dark d-inline">@{{user.login}}</p>
+    <button type="button" class="btn-light  d-inline rounded">Редактировать профиль</button>
+    <button type="button" class="btn-danger rounded">Настройки</button>
+    <div class="d-flex  mt-4">
+      <div class="col-sm-3 d-flex">
+        <p class="text-info d-flex">0 публикаций</p>
+      </div>
+      <div class="col-sm-1">
+
+      </div>
+      <div class="col-sm-3 d-flex">
+        <p class="text-info d-flex">60 подписчиков</p>
+      </div>
+      <div class="col-sm-1 d-flex">
+
+      </div>
+      <div class="col-sm-3 d-flex">
+        <p class="text-info d-flex">100 подписок</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<app-publication></app-publication>

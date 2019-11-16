@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="Index.html" routerLink="/story">{{title}}</a>
+    <button class="navbar-toggler" type="button" data-target="#my-nav" data-toggle="collapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="my-nav" class="collapse navbar-collapse justify-content-end">
+      <ul class="nav navbar-nav mx-auto">
+        <li>
+          <form class="form-inline" action="/somepage">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-dark" type="submit">Search</button>
+          </form>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" (click)="openDialog()">Likes</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signout">Sign out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>

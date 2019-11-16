@@ -1,0 +1,33 @@
+<div class="card img_wrap">
+  <div class="card-header border-success">
+    <span class="image_span float-left" [ngStyle]="{'background-image': getUrl()}"></span>
+    <h6 class="ml-3 mt-3 card-title float-left">batyaOrechov</h6>
+
+    <i class="fas fa-ellipsis-h float-right" (click)="openDialog()" ></i>
+  </div>
+  <div class="card-body">
+    <img class="card-img-top " [src]="src"/>
+  </div>
+  <div class="card-footer">
+    <section>
+      <span>
+        <button class="mark_button">
+          <i class="far fa-thumbs-up large_icon"></i>
+        </button>
+      </span>
+      <span>
+        <button class="mark_button"><i class="far fa-thumbs-down large_icon"></i></button>
+      </span>
+    </section>
+    <p class="card-text">{{description}}</p>
+    <p class="card-text"><span *ngFor="let item of hashTags">{{item}}</span></p>
+    <div class="panel-body">
+      <textarea class="form-control" placeholder="write a comment..." rows="3"></textarea>
+      <br>
+      <button type="button" class="btn btn-info pull-right">Post</button>
+      <div class="clearfix"></div>
+      <hr>
+      <app-comment></app-comment>
+    </div>
+  </div>
+</div>
