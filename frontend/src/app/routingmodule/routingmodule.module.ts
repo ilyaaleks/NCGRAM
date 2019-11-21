@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
-import {MainComponent} from '../main/main.component';
-import {AboutUserComponent} from '../about-user/about-user.component';
-import {RegistrationComponent} from '../registration/registration.component';
-import {StoryMenuComponent} from '../story-menu/story-menu.component';
-import {ActivityComponent} from '../activity/activity.component';
+import {MainComponent} from '../Components/main/main.component';
+import {AboutUserComponent} from '../Components/about-user/about-user.component';
+import {RegistrationComponent} from '../Components/registration/registration.component';
+import {StoryMenuComponent} from '../Components/story-menu/story-menu.component';
+import {ActivityComponent} from '../Components/activity/activity.component';
 
 const appRoutes: Routes = [
   {path: 'home', component: MainComponent},

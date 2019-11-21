@@ -1,8 +1,12 @@
-package com.nc.edu.fapi.models;
+package com.nc.edu.backend.domain;
 
-import java.util.Objects;
+import javax.persistence.*;
+import java.util.Set;
 
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
     private String name;
     private String surname;
@@ -12,20 +16,18 @@ public class User {
     private String role;
     private String status;
     private String photoUrl;
+    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 
+    private Set<LikeOrDislike> likeOrDislike;
+    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private Set<Post> posts;
+    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private Set<Claim> claims;
     public User() {
     }
 
-    public String getPhotoUrl() {
-        return photoUrl;
-    }
 
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
-    }
-
-    public User(long id, String name, String surname, String aboutMe, String login, String password, String role, String status, String photoUrl) {
-        this.id = id;
+    public User(String name, String surname, String aboutMe, String login, String password, String role, String status, String photoUrl, Set<LikeOrDislike> likeOrDislike, Set<Post> posts) {
         this.name = name;
         this.surname = surname;
         this.aboutMe = aboutMe;
@@ -33,7 +35,9 @@ public class User {
         this.password = password;
         this.role = role;
         this.status = status;
-        this.photoUrl=photoUrl;
+        this.photoUrl = photoUrl;
+        this.likeOrDislike = likeOrDislike;
+        this.posts = posts;
     }
 
     @Override
@@ -50,19 +54,21 @@ public class User {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return id == user.id;
+    public Set<LikeOrDislike> getLikeOrDislike() {
+        return likeOrDislike;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
+    public void setLikeOrDislike(Set<LikeOrDislike> likeOrDislike) {
+        this.likeOrDislike = likeOrDislike;
     }
 
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
     public long getId() {
         return id;
     }
@@ -125,6 +131,14 @@ public class User {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Set<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(Set<Post> posts) {
+        this.posts = posts;
     }
 }
 
