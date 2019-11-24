@@ -3,6 +3,7 @@ package com.nc.edu.backend.domain;
 import javax.persistence.*;
 import java.util.Date;
 @Entity
+@Table(name="claim")
 public class Claim {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -17,8 +18,6 @@ public class Claim {
     @JoinColumn(name = "author_id")
     private User author;
 
-    public Claim() {
-    }
     public Claim(Post post, Date date, String reason, String status, User author) {
         this.post = post;
         this.date = date;
@@ -27,23 +26,7 @@ public class Claim {
         this.author = author;
     }
 
-    public void setAuthor(User author) {
-        this.author = author;
-    }
-
-    public User getAuthor() {
-        return author;
-    }
-
-    @Override
-    public String toString() {
-        return "Claim{" +
-                "id=" + id +
-                ", postId=" + post.getId()+
-                ", date=" + date +
-                ", reason='" + reason + '\'' +
-                ", status='" + status + '\'' +
-                '}';
+    public Claim() {
     }
 
     public long getId() {
@@ -86,6 +69,11 @@ public class Claim {
         this.status = status;
     }
 
+    public User getAuthor() {
+        return author;
+    }
 
-
+    public void setAuthor(User author) {
+        this.author = author;
+    }
 }

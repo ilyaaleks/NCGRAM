@@ -14,18 +14,23 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/id/{id}", method = RequestMethod.GET)
-    public ResponseEntity<User> getUserByLogin(@PathVariable(name = "id") String id) {
-        User user = userService.findById(Long.valueOf(id)).get();//
+    @GetMapping(value = "/id/{id}")
+    public ResponseEntity<User> getUserByLogin(@PathVariable(name = "id") long id) {
+        User user = userService.findById(id).get();//
+        return ResponseEntity.ok(user);
+    }
+    @RequestMapping(value = "/login/{login}", method = RequestMethod.GET)
+    public ResponseEntity<User> getUserByLogin(@PathVariable(name = "login") String login) {//vs requestparam???
+        User user = userService.findByLogin(login);
         return ResponseEntity.ok(user);
     }
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
+    @GetMapping(value = "")
     public List<User> getAllUsers() {
         return userService.findAll();
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @PostMapping
     public User saveUser(@RequestBody User user) {
         return userService.save(user);
     }

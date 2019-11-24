@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Table(name="hash_tag")
 public class HashTag {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -19,19 +20,12 @@ public class HashTag {
     )
     private Set<Post> posts=new HashSet<>();
 
-    @Override
-    public String toString() {
-        return "HashTag{" +
-                "id=" + id +
-                ", text='" + text + '\'' +
-                ", postsId="  +
-                '}';
+    public HashTag() {
     }
+
     public HashTag(String text, Set<Post> posts) {
         this.text = text;
         this.posts = posts;
-    }
-    public HashTag() {
     }
 
     public long getId() {
@@ -49,8 +43,6 @@ public class HashTag {
     public void setText(String text) {
         this.text = text;
     }
-
-
 
     public Set<Post> getPosts() {
         return posts;

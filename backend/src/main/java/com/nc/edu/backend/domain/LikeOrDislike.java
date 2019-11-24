@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Set;
 
 @Entity
+@Table(name="like_or_dislike")
 public class LikeOrDislike {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -15,17 +16,20 @@ public class LikeOrDislike {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User author;
+    @Enumerated
     private TypeOfVote typeOfVote;
     private Date date;
-    public LikeOrDislike() {
 
+    public LikeOrDislike() {
     }
+
     public LikeOrDislike(Post post, User author, TypeOfVote typeOfVote, Date date) {
         this.post = post;
         this.author = author;
         this.typeOfVote = typeOfVote;
         this.date = date;
     }
+
     public long getId() {
         return id;
     }
@@ -34,7 +38,13 @@ public class LikeOrDislike {
         this.id = id;
     }
 
+    public Post getPost() {
+        return post;
+    }
 
+    public void setPost(Post post) {
+        this.post = post;
+    }
 
     public User getAuthor() {
         return author;
@@ -59,19 +69,4 @@ public class LikeOrDislike {
     public void setDate(Date date) {
         this.date = date;
     }
-
-
-
-    public Post getPost() {
-        return post;
-    }
-
-    public void setPost(Post post) {
-        this.post = post;
-    }
-
-
-
-
-
 }

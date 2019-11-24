@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-story-item',
@@ -6,9 +6,14 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./story-item.component.css']
 })
 export class StoryItemComponent implements OnInit {
-  time = '15 минут';
-  author = 'batyaOrechov';
-  source = 'assets/img/Image00008-4.jpg';
+  @Input()
+  id:number;
+  @Input()
+  time: string;
+  @Input()
+  author:string;
+  @Input()
+  source:string;
 
   constructor() {
   }

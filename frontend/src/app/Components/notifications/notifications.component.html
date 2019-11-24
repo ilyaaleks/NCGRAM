@@ -1,8 +1,83 @@
-
+<h2 mat-dialog-title>Add post</h2>
 <div class="d-flex flex-row bd-highlight mb-3" style="overflow:hidden auto; height: auto">
-  <div role="button">
-      <span class="image_span float-left" [ngStyle]="{'background-image': getUrl()}"></span>
-      <a href="#">timofeev.y</a> поставил лайк:
-      <span class="image_span float-left" [ngStyle]="{'background-image': getUrl1()}"></span>
-  </div>
+  <form [formGroup]="addPostForm">
+    <div class="input-group p-1">
+      <div class="input-group-prepend ">
+        <span class="input-group-text" id="basic-addon1">#</span>
+      </div>
+      <input formControlName="tags" type="text" class="form-control" placeholder="tags" aria-label="tags"
+             aria-describedby="basic-addon1">
+
+    </div>
+    <div class="input-group p-1">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon2"><i class="fas fa-envelope-square"></i></span>
+      </div>
+      <input type="text" formControlName="email" class="form-control" placeholder="Email" aria-label="Email"
+             aria-describedby="basic-addon2">
+
+    </div>
+    <div class="alert alert-danger"
+         *ngIf="registrationForm.controls['email'].invalid && registrationForm.controls['email'].touched">
+      Incorrect email
+    </div>
+    <div class="input-group p-1">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3"><i class="far fa-user-circle"></i></span>
+      </div>
+      <input type="text" formControlName="about" class="form-control" placeholder="About you" aria-label="Email"
+             aria-describedby="basic-addon3">
+
+    </div>
+    <div class="alert alert-danger"
+         *ngIf="registrationForm.controls['about'].invalid && registrationForm.controls['about'].touched">
+      Required field
+    </div>
+    <div class="input-group p-1">
+      <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon4">
+
+                        <i class="fas fa-info"></i>
+
+
+                    </span>
+      </div>
+      <input type="text" class="form-control" formControlName="firstName" placeholder="First name">
+      <input type="text" class="form-control" formControlName="lastName" placeholder="Last name">
+
+    </div>
+    <div class="alert alert-danger"
+         *ngIf="(registrationForm.controls['lastName'].invalid && registrationForm.controls['lastName'].touched) || (registrationForm.controls['firstName'].invalid && registrationForm.controls['firstName'].touched)">
+
+      Required field
+    </div>
+    <div class="input-group p-1">
+      <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon5"><i class="fas fa-unlock"></i>
+                    </span>
+      </div>
+      <input type="password" formControlName="password" class="form-control" placeholder="Password" aria-label="Email"
+             aria-describedby="basic-addon5">
+    </div>
+    <div class="input-group p-1">
+      <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon6"><i class="fas fa-lock-open"></i>
+
+
+                    </span>
+      </div>
+      <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm password" aria-label="Email"
+             aria-describedby="basic-addon6">
+
+    </div>
+    <div class="alert alert-danger"
+         *ngIf="(registrationForm.controls['confirmPassword'].invalid && registrationForm.controls['confirmPassword'].touched) || (registrationForm.controls['password'].invalid && registrationForm.controls['password'].touched && registrationForm.valid)">
+      Required field
+    </div>
+
+    <div class=" p-1">
+      <button *ngIf="registrationForm.valid" class="btn btn-info btn-block">Add post</button>
+      <button *ngIf="!registrationForm.valid" disabled="disabled" class="btn btn-dark btn-block">Add post</button>
+    </div>
+  </form>
 </div>

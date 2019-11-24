@@ -23,6 +23,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NotificationsComponent} from './Components/notifications/notifications.component';
 import {UserService} from "./service/user-service";
 import {PostService} from "./service/post.service";
+import {UploadFileService} from "./service/upload-file.service";
 
 @NgModule({
   entryComponents: [DialogwindowComponent, NotificationsComponent],
@@ -49,7 +50,7 @@ import {PostService} from "./service/post.service";
     MatDialogModule,
     BrowserAnimationsModule
   ],
-  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}, UserService,PostService],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}, UserService,PostService, UploadFileService],
   bootstrap: [AppComponent],
   exports: [MatDialogModule]
 })

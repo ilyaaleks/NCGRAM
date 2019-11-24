@@ -8,4 +8,5 @@ export interface UserModel {
   role:string;
   status:string;
   photoUrl:string;
+  email:string;
 }

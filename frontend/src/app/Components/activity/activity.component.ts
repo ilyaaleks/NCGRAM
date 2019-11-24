@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./activity.component.css']
 })
 export class ActivityComponent implements OnInit {
-
+  public url:string='api/blog';
   constructor() { }
 
   ngOnInit() {

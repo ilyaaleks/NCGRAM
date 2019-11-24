@@ -4,6 +4,7 @@ import {Observable, ReplaySubject, Subject} from 'rxjs';
 import {HttpService} from './http.service';
 import {map} from "rxjs/operators";
 import {HttpClient} from "@angular/common/http";
+import {post} from "selenium-webdriver/http";
 
 @Injectable({
   providedIn: 'root'
@@ -34,9 +35,7 @@ export class UserService {
     return this.user.asObservable();
   }
   public saveUser(user: UserModel): Observable<UserModel> {
-    if (!this.user) {
       return this.httpClient.post<UserModel>('/api/users',user);
-    }
   }
   public updateUser(user:UserModel):Observable<UserModel>
   {
@@ -52,4 +51,6 @@ export class UserService {
       return this.httpClient.delete<void>("api/user/"+user.id);
     }
   }
+
+
 }

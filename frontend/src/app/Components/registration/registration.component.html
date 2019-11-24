@@ -4,7 +4,7 @@
 
   </div>
   <div class="col-6 mt-5 align-content-center ">
-    <form [formGroup]="registrationForm">
+    <form [formGroup]="registrationForm" enc>
       <div class="input-group p-1">
         <div class="input-group-prepend ">
           <span class="input-group-text" id="basic-addon1">@</span>
@@ -82,14 +82,19 @@
            *ngIf="(registrationForm.controls['confirmPassword'].invalid && registrationForm.controls['confirmPassword'].touched) || (registrationForm.controls['password'].invalid && registrationForm.controls['password'].touched && registrationForm.valid)">
         Required field
       </div>
+      <input type="file" name="file" formControlName="file" (change)="onFileChange($event.target.files)">
 
-      <div class=" p-1">
-        <button *ngIf="registrationForm.valid" class="btn btn-info btn-block">Register</button>
-        <button *ngIf="!registrationForm.valid" disabled="disabled" class="btn btn-dark btn-block">Register</button>
-      </div>
     </form>
+    <div class=" p-1">
+      <button *ngIf="!registrationForm.valid" disabled="disabled" class="btn btn-dark btn-block">Register</button>
+      <button *ngIf="registrationForm.valid" class="btn btn-info btn-block" (click)="registerUser()">Register</button>
+    </div>
   </div>
+<!--
 
+
+
+ -->
   <div class="col-3">
 
   </div>

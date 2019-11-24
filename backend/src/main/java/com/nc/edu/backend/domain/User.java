@@ -1,33 +1,69 @@
 package com.nc.edu.backend.domain;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
+@Table(name="user")
 public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
     private String name;
     private String surname;
+
+    public Set<User> getSubscribers() {
+        return subscribers;
+    }
+
+    public void setSubscribers(Set<User> subscribers) {
+        this.subscribers = subscribers;
+    }
+
+    public Set<User> getSubscribtions() {
+        return subscribtions;
+    }
+
+    public void setSubscribtions(Set<User> subscribtions) {
+        this.subscribtions = subscribtions;
+    }
+
+    @Column(name = "about_me")
     private String aboutMe;
     private String login;
     private String password;
     private String role;
     private String status;
+    @Column(name="photo_url")
     private String photoUrl;
     @OneToMany(mappedBy = "author",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private List<LikeOrDislike> likeOrDislike;
+    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private List<Post> posts;
+    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private List<Claim> claims;
+    @ManyToMany
+    @JoinTable(
+            name="user_subscriptions",
+            joinColumns = {@JoinColumn(name="subscriber_id")},
+            inverseJoinColumns = {@JoinColumn(name="channel_id")}
+    )
 
-    private Set<LikeOrDislike> likeOrDislike;
-    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    private Set<Post> posts;
-    @OneToMany(mappedBy = "author",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    private Set<Claim> claims;
+    private Set<User> subscribers=new HashSet<>();
+    @ManyToMany
+    @JoinTable(
+            name="user_subscriptions",
+            joinColumns = {@JoinColumn(name="channel_id")},
+            inverseJoinColumns = {@JoinColumn(name="subscriber_id")}
+    )
+    private Set<User> subscribtions=new HashSet<>();
+
     public User() {
     }
 
-
-    public User(String name, String surname, String aboutMe, String login, String password, String role, String status, String photoUrl, Set<LikeOrDislike> likeOrDislike, Set<Post> posts) {
+    public User(String name, String surname, String aboutMe, String login, String password, String role, String status, String photoUrl, List<LikeOrDislike> likeOrDislike, List<Post> posts, List<Claim> claims) {
         this.name = name;
         this.surname = surname;
         this.aboutMe = aboutMe;
@@ -38,37 +74,9 @@ public class User {
         this.photoUrl = photoUrl;
         this.likeOrDislike = likeOrDislike;
         this.posts = posts;
+        this.claims = claims;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", aboutMe='" + aboutMe + '\'' +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", role='" + role + '\'' +
-                ", status='" + status + '\'' +
-                '}';
-    }
-
-    public Set<LikeOrDislike> getLikeOrDislike() {
-        return likeOrDislike;
-    }
-
-    public void setLikeOrDislike(Set<LikeOrDislike> likeOrDislike) {
-        this.likeOrDislike = likeOrDislike;
-    }
-
-    public String getPhotoUrl() {
-        return photoUrl;
-    }
-
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
-    }
     public long getId() {
         return id;
     }
@@ -133,12 +141,36 @@ public class User {
         this.status = status;
     }
 
-    public Set<Post> getPosts() {
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
+
+    public List<LikeOrDislike> getLikeOrDislike() {
+        return likeOrDislike;
+    }
+
+    public void setLikeOrDislike(List<LikeOrDislike> likeOrDislike) {
+        this.likeOrDislike = likeOrDislike;
+    }
+
+    public List<Post> getPosts() {
         return posts;
     }
 
-    public void setPosts(Set<Post> posts) {
+    public void setPosts(List<Post> posts) {
         this.posts = posts;
+    }
+
+    public List<Claim> getClaims() {
+        return claims;
+    }
+
+    public void setClaims(List<Claim> claims) {
+        this.claims = claims;
     }
 }
 

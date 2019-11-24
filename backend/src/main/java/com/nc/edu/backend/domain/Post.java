@@ -6,13 +6,15 @@ import java.util.Date;
 import java.util.Set;
 
 @Entity
+@Table(name="posts")
 public class Post {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
-    @ManyToOne(fetch = FetchType.EAGER,cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User author;
+    @Column(name = "photo_path")
     private String photoPath;
     private String text;
     private Date date;
@@ -24,8 +26,10 @@ public class Post {
     private Set<Comment> comments;
     @OneToMany(mappedBy = "post",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private Set<LikeOrDislike> likeOrDislikes;
+
     public Post() {
     }
+
     public Post(User author, String photoPath, String text, Date date, Set<Claim> claims, Set<HashTag> hashTags, Set<Comment> comments, Set<LikeOrDislike> likeOrDislikes) {
         this.author = author;
         this.photoPath = photoPath;
@@ -35,45 +39,6 @@ public class Post {
         this.hashTags = hashTags;
         this.comments = comments;
         this.likeOrDislikes = likeOrDislikes;
-    }
-    public Set<LikeOrDislike> getLikeOrDislikes() {
-        return likeOrDislikes;
-    }
-
-    public void setLikeOrDislikes(Set<LikeOrDislike> likeOrDislikes) {
-        this.likeOrDislikes = likeOrDislikes;
-    }
-
-    public Set<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(Set<Comment> comments) {
-        this.comments = comments;
-    }
-
-
-
-
-
-    public Set<Claim> getClaims() {
-        return claims;
-    }
-
-    public void setClaims(Set<Claim> claims) {
-        this.claims = claims;
-    }
-
-    @Override
-    public String toString() {
-        return "Post{" +
-                "id=" + id +
-                ", authorId=" + author.getName() +
-                ", photoPath='" + photoPath + '\'' +
-                ", text='" + text + '\'' +
-                ", date=" + date +
-                ", hashTags=" +
-                '}';
     }
 
     public long getId() {
@@ -116,7 +81,13 @@ public class Post {
         this.date = date;
     }
 
+    public Set<Claim> getClaims() {
+        return claims;
+    }
 
+    public void setClaims(Set<Claim> claims) {
+        this.claims = claims;
+    }
 
     public Set<HashTag> getHashTags() {
         return hashTags;
@@ -124,5 +95,21 @@ public class Post {
 
     public void setHashTags(Set<HashTag> hashTags) {
         this.hashTags = hashTags;
+    }
+
+    public Set<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public Set<LikeOrDislike> getLikeOrDislikes() {
+        return likeOrDislikes;
+    }
+
+    public void setLikeOrDislikes(Set<LikeOrDislike> likeOrDislikes) {
+        this.likeOrDislikes = likeOrDislikes;
     }
 }

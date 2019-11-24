@@ -3,6 +3,7 @@ package com.nc.edu.backend.domain;
 import javax.persistence.*;
 import java.util.Date;
 @Entity
+@Table(name="comment")
 public class Comment {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -16,31 +17,14 @@ public class Comment {
     @JoinColumn(name="post_id")
     private Post postComment;
 
-    public Comment(User author, String text, Date date, Post post) {
+    public Comment() {
+    }
+
+    public Comment(User author, String text, Date date, Post postComment) {
         this.author = author;
         this.text = text;
         this.date = date;
-        this.postComment = post;
-    }
-
-    public Comment() {
-    }
-    public Post getPost() {
-        return postComment;
-    }
-
-    public void setPost(Post post) {
-        this.postComment = post;
-    }
-
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", authorId=" + author.getName() +
-                ", text='" + text + '\'' +
-                ", date=" + date +
-                '}';
+        this.postComment = postComment;
     }
 
     public long getId() {
@@ -82,5 +66,4 @@ public class Comment {
     public void setPostComment(Post postComment) {
         this.postComment = postComment;
     }
-
 }
