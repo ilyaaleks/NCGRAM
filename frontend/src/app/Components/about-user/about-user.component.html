@@ -1,11 +1,11 @@
 <app-navigation></app-navigation>
 <div class="row" style="margin-top:5em">
   <div class="col-sm-3 d-inline ml-5">
-    <img class="img-fluid rounded d-inline" [src]="user.photoUrl" style="max-width: 10em;"/>
+    <img class="img-fluid rounded d-inline" [src]="activeUser.photoUrl" style="max-width: 10em;"/>
   </div>
 
   <div class="cols-sm-8 float-left ml-4">
-    <p class="text-dark d-inline">@{{user.login}}</p>
+    <p class="text-dark d-inline">@{{activeUser.login}}</p>
     <button type="button" class="btn-light  d-inline rounded">Редактировать профиль</button>
     <button type="button" class="btn-danger rounded">Настройки</button>
     <div class="d-flex  mt-4">
@@ -28,4 +28,7 @@
     </div>
   </div>
 </div>
-<app-publication *ngIf="countOfPosts===0"></app-publication>
+<app-publication *ngIf="countOfPosts===0; else postsExist"></app-publication>
+<ng-template ><!--#postsExists -->
+  Please friend, login.
+</ng-template>

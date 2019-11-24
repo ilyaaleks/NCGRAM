@@ -14,10 +14,10 @@ import {HttpClient} from "@angular/common/http";
 })
 export class AboutUserComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription;
-  public user: UserModel;
-  public countOfSubscribers:number=15;
-  public countOfSubscriptions:number=10;//спрсоить, как реализовывать просмотр подписчиков более лаконично
-  public countOfPosts:number=3;
+  public activeUser: UserModel;
+  public countOfSubscribers:number;
+  public countOfSubscriptions:number;//спрсоить, как реализовывать просмотр подписчиков более лаконично
+  public countOfPosts:number;
   constructor(
     private activatedRoute: ActivatedRoute,
     private userService: UserService,
@@ -26,13 +26,26 @@ export class AboutUserComponent implements OnInit, OnDestroy {
     this.subscriptions = this.activatedRoute.paramMap.subscribe(
       (params: ParamMap) => {
         this.userService.getUser(params.get("id")).subscribe((user: UserModel) => {
-          this.user = user;
-          console.log(this.user);
+          this.activeUser = user;
           }
         )
-
-
+        this.countOfSubscribers=this.userService.getNumberSubscribers(params.get("id"));
+        this.countOfSubscriptions=this.userService.getNumberSubscribtions(params.get("id"));
+        this.countOfPosts=this.userService.getNumberPosts(params.get("id"));
       });
+    if(this.countOfSubscriptions==null)
+    {
+      this.countOfSubscriptions=0;
+    }
+    if(this.countOfSubscribers==null)
+    {
+      this.countOfSubscribers=0;
+    }
+    if(this.countOfPosts==null)
+    {
+      this.countOfPosts=0;
+    }
+
 
   }
 
