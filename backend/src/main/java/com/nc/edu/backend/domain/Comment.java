@@ -13,7 +13,7 @@ public class Comment {
     private User author;
     private String text;
     private Date date;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="post_id")
     private Post postComment;
 

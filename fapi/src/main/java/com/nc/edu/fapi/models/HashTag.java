@@ -1,22 +1,18 @@
 package com.nc.edu.fapi.models;
 
-import java.util.Arrays;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class HashTag {
     private long id;
     private String text;
-    private long[] postsId;
-
-    @Override
-    public String toString() {
-        return "HashTag{" +
-                "id=" + id +
-                ", text='" + text + '\'' +
-                ", postsId=" + Arrays.toString(postsId) +
-                '}';
-    }
 
     public HashTag() {
+    }
+
+    public HashTag(String text) {
+        this.text = text;
     }
 
     public long getId() {
@@ -35,17 +31,4 @@ public class HashTag {
         this.text = text;
     }
 
-    public long[] getPostsId() {
-        return postsId;
-    }
-
-    public void setPostsId(long[] postsId) {
-        this.postsId = postsId;
-    }
-
-    public HashTag(long id, String text, long[] postsId) {
-        this.id = id;
-        this.text = text;
-        this.postsId = postsId;
-    }
 }

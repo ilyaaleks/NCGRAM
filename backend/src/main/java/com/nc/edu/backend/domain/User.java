@@ -13,22 +13,23 @@ public class User {
     private long id;
     private String name;
     private String surname;
-
+    private String email;
     public Set<User> getSubscribers() {
         return subscribers;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setSubscribers(Set<User> subscribers) {
         this.subscribers = subscribers;
     }
 
-    public Set<User> getSubscribtions() {
-        return subscribtions;
-    }
-
-    public void setSubscribtions(Set<User> subscribtions) {
-        this.subscribtions = subscribtions;
-    }
 
     @Column(name = "about_me")
     private String aboutMe;
@@ -50,7 +51,6 @@ public class User {
             joinColumns = {@JoinColumn(name="subscriber_id")},
             inverseJoinColumns = {@JoinColumn(name="channel_id")}
     )
-
     private Set<User> subscribers=new HashSet<>();
     @ManyToMany
     @JoinTable(
@@ -58,14 +58,15 @@ public class User {
             joinColumns = {@JoinColumn(name="channel_id")},
             inverseJoinColumns = {@JoinColumn(name="subscriber_id")}
     )
-    private Set<User> subscribtions=new HashSet<>();
+    private Set<User> subscriptions=new HashSet<>();
 
     public User() {
     }
 
-    public User(String name, String surname, String aboutMe, String login, String password, String role, String status, String photoUrl, List<LikeOrDislike> likeOrDislike, List<Post> posts, List<Claim> claims) {
+    public User(String name, String surname, String email, String aboutMe, String login, String password, String role, String status, String photoUrl, List<LikeOrDislike> likeOrDislike, List<Post> posts, List<Claim> claims, Set<User> subscribers, Set<User> subscriptions) {
         this.name = name;
         this.surname = surname;
+        this.email = email;
         this.aboutMe = aboutMe;
         this.login = login;
         this.password = password;
@@ -75,6 +76,16 @@ public class User {
         this.likeOrDislike = likeOrDislike;
         this.posts = posts;
         this.claims = claims;
+        this.subscribers = subscribers;
+        this.subscriptions = subscriptions;
+    }
+
+    public Set<User> getSubscriptions() {
+        return subscriptions;
+    }
+
+    public void setSubscriptions(Set<User> subscriptions) {
+        this.subscriptions = subscriptions;
     }
 
     public long getId() {

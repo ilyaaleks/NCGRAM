@@ -1,23 +1,25 @@
 package com.nc.edu.fapi.models;
 
+import javax.persistence.*;
 import java.util.Date;
 
 public class Claim {
     private long id;
-    private long postId;
+    private Post post;
     private Date date;
     private String reason;
     private String status;
+    private User author;
 
-    @Override
-    public String toString() {
-        return "Claim{" +
-                "id=" + id +
-                ", postId=" + postId +
-                ", date=" + date +
-                ", reason='" + reason + '\'' +
-                ", status='" + status + '\'' +
-                '}';
+    public Claim(Post post, Date date, String reason, String status, User author) {
+        this.post = post;
+        this.date = date;
+        this.reason = reason;
+        this.status = status;
+        this.author = author;
+    }
+
+    public Claim() {
     }
 
     public long getId() {
@@ -28,12 +30,12 @@ public class Claim {
         this.id = id;
     }
 
-    public long getPostId() {
-        return postId;
+    public Post getPost() {
+        return post;
     }
 
-    public void setPostId(long postId) {
-        this.postId = postId;
+    public void setPost(Post post) {
+        this.post = post;
     }
 
     public Date getDate() {
@@ -60,14 +62,11 @@ public class Claim {
         this.status = status;
     }
 
-    public Claim() {
+    public User getAuthor() {
+        return author;
     }
 
-    public Claim(long id, long postId, Date date, String reason, String status) {
-        this.id = id;
-        this.postId = postId;
-        this.date = date;
-        this.reason = reason;
-        this.status = status;
+    public void setAuthor(User author) {
+        this.author = author;
     }
 }

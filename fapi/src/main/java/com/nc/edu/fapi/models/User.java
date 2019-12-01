@@ -1,66 +1,34 @@
 package com.nc.edu.fapi.models;
 
-import java.util.Objects;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class User {
     private long id;
     private String name;
     private String surname;
+    private String email;
     private String aboutMe;
     private String login;
     private String password;
     private String role;
     private String status;
     private String photoUrl;
-
     public User() {
     }
 
-    public String getPhotoUrl() {
-        return photoUrl;
-    }
-
-    public void setPhotoUrl(String photoUrl) {
-        this.photoUrl = photoUrl;
-    }
-
-    public User(long id, String name, String surname, String aboutMe, String login, String password, String role, String status, String photoUrl) {
-        this.id = id;
+    public User(String name, String surname, String email, String aboutMe, String login, String password, String role, String status, String photoUrl) {
         this.name = name;
         this.surname = surname;
+        this.email = email;
         this.aboutMe = aboutMe;
         this.login = login;
         this.password = password;
         this.role = role;
         this.status = status;
-        this.photoUrl=photoUrl;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", aboutMe='" + aboutMe + '\'' +
-                ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
-                ", role='" + role + '\'' +
-                ", status='" + status + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return id == user.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
+        this.photoUrl = photoUrl;
     }
 
     public long getId() {
@@ -85,6 +53,14 @@ public class User {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getAboutMe() {
@@ -125,6 +101,14 @@ public class User {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
     }
 }
 

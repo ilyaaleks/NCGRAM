@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ValidatorFn, Validators} from '@angular/forms';
-import {UploadFileService} from "../../service/upload-file.service";
 import {UserModel} from "../../Model/userModel";
 import {UserService} from "../../service/user-service";
+import {Router} from "@angular/router";
+import {Observable} from "rxjs";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-registration',
@@ -11,9 +13,9 @@ import {UserService} from "../../service/user-service";
 })
 export class RegistrationComponent implements OnInit {
   public registrationForm: FormGroup;
-
-  constructor(private fileUploadService:UploadFileService,
-              private userService:UserService) {
+  public status:string;
+  constructor(private userService:UserService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -58,13 +60,15 @@ export class RegistrationComponent implements OnInit {
     role:null,
     status:null,
     photoUrl:null,
-      email:this.registrationForm.controls['email'].value
+    email:this.registrationForm.controls['email'].value
     }
-    this.userService.saveUser(user).subscribe();
-    this.fileUploadService.postFile(this.fileToUpload,user).subscribe(data => {
-    }, error => {
-      console.log(error);
-    });
+    this.userService.saveUser(user,this.fileToUpload).subscribe(()=> {
+
+      },(error1) => {
+        this.status=error1;
+      }
+    );
+    this.router.navigate(['/home']);
 
   }
 

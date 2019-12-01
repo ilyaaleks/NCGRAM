@@ -1,4 +1,4 @@
-import {Component, OnInit, TemplateRef} from '@angular/core';
+import {Component, Input, OnInit, TemplateRef} from '@angular/core';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {DialogwindowComponent} from '../dialogwindow/dialogwindow.component';
@@ -9,9 +9,20 @@ import {DialogwindowComponent} from '../dialogwindow/dialogwindow.component';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  src = 'assets/img/Image00008-4.jpg';
-  hashTags = ['#batyaSnimaet', '#VitaliyOrechov'];
-  description = 'Всем привет, сегодня снимаем новую сцену';
+  @Input()
+  author="ilya";
+  @Input()
+  description;
+  @Input()
+  date;
+  @Input()
+  hashTags=["best"];
+  @Input()
+  src=this.getUrl();
+  @Input()
+  id;
+
+
 
   constructor(public dialog: MatDialog) {
 

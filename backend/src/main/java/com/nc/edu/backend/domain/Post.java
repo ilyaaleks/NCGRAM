@@ -11,20 +11,20 @@ public class Post {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="user_id")
     private User author;
     @Column(name = "photo_path")
     private String photoPath;
     private String text;
     private Date date;
-    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Set<Claim> claims;
     @ManyToMany(mappedBy = "posts")
     private Set<HashTag> hashTags;
-    @OneToMany(mappedBy = "postComment",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "postComment",cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
     private Set<Comment> comments;
-    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "post",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Set<LikeOrDislike> likeOrDislikes;
 
     public Post() {

@@ -1,10 +1,16 @@
 <app-navigation></app-navigation>
 <div class="row">
   <div class="col-sm-7">
-    <app-post></app-post>
-    <app-post></app-post>
-    <app-post></app-post>
-    <app-post></app-post>
+    <span *ngFor="let item of posts">
+      <app-post [author]="item.authorName"
+                [description]="item.text"
+                [date]="item.date"
+                [hashTags]="item.hashTags"
+                [src]="item.photoPath"
+                  [id]="item.id"></app-post>
+    </span>
+
+
   </div>
 
   <div class="col-sm-1">
@@ -14,3 +20,6 @@
   </div>
 
 </div>
+<ngb-pagination [collectionSize]="totalItems" [pageSize]="itemsPerPage" [(page)]="page" [maxSize]="7" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+
+<!--<img src="/api/image/url"/>-->

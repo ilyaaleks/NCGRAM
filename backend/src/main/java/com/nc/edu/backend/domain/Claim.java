@@ -8,7 +8,7 @@ public class Claim {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "post_id")
     private Post post;
     private Date date;

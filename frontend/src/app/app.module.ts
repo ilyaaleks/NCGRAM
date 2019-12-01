@@ -23,7 +23,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NotificationsComponent} from './Components/notifications/notifications.component';
 import {UserService} from "./service/user-service";
 import {PostService} from "./service/post.service";
-import {UploadFileService} from "./service/upload-file.service";
+import {ScrollingModule} from "@angular/cdk/scrolling";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   entryComponents: [DialogwindowComponent, NotificationsComponent],
@@ -41,18 +42,19 @@ import {UploadFileService} from "./service/upload-file.service";
     CommentComponent,
     AboutUserComponent,
     DialogwindowComponent,
-    NotificationsComponent
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule, FormsModule, RoutingmoduleModule, ReactiveFormsModule,
     HttpClientModule,
     ModalModule.forRoot(),
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
-  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}, UserService,PostService, UploadFileService],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}, UserService,PostService],
   bootstrap: [AppComponent],
-  exports: [MatDialogModule]
+  exports: [MatDialogModule,ScrollingModule]
 })
 export class AppModule {
 }

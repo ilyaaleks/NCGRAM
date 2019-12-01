@@ -1,13 +1,25 @@
 package com.nc.edu.fapi.models;
 
+import javax.persistence.*;
 import java.util.Date;
 
 public class LikeOrDislike {
     private long id;
-    private long postId;
-    private long authorId;
+    private Post post;
+    private User author;
     private TypeOfVote typeOfVote;
     private Date date;
+
+    public LikeOrDislike() {
+    }
+
+    public LikeOrDislike(Post post, User author, TypeOfVote typeOfVote, Date date) {
+        this.post = post;
+        this.author = author;
+        this.typeOfVote = typeOfVote;
+        this.date = date;
+    }
+
     public long getId() {
         return id;
     }
@@ -16,20 +28,20 @@ public class LikeOrDislike {
         this.id = id;
     }
 
-    public long getPostId() {
-        return postId;
+    public Post getPost() {
+        return post;
     }
 
-    public void setPostId(long postId) {
-        this.postId = postId;
+    public void setPost(Post post) {
+        this.post = post;
     }
 
-    public long getAuthorId() {
-        return authorId;
+    public User getAuthor() {
+        return author;
     }
 
-    public void setAuthorId(long authorId) {
-        this.authorId = authorId;
+    public void setAuthor(User author) {
+        this.author = author;
     }
 
     public TypeOfVote getTypeOfVote() {
@@ -47,20 +59,4 @@ public class LikeOrDislike {
     public void setDate(Date date) {
         this.date = date;
     }
-
-    public LikeOrDislike(long id, long postId, long authorId, TypeOfVote typeOfVote, Date date) {
-        this.id = id;
-        this.postId = postId;
-        this.authorId = authorId;
-        this.typeOfVote = typeOfVote;
-        this.date = date;
-    }
-
-
-
-    public LikeOrDislike() {
-    }
-
-
-
 }

@@ -1,7 +1,7 @@
 <div class="card img_wrap">
   <div class="card-header border-success">
     <span class="image_span float-left" [ngStyle]="{'background-image': getUrl()}"></span>
-    <h6 class="ml-3 mt-3 card-title float-left">batyaOrechov</h6>
+    <h6 class="ml-3 mt-3 card-title float-left">{{author}}</h6>
 
     <i class="fas fa-ellipsis-h float-right" (click)="openDialog()" ></i>
   </div>
@@ -20,7 +20,7 @@
       </span>
     </section>
     <p class="card-text">{{description}}</p>
-    <p class="card-text"><span *ngFor="let item of hashTags">{{item}}</span></p>
+    <p class="card-text"><a href="#" *ngFor="let item of hashTags">{{"#"+item+" "}}</a></p>
     <div class="panel-body">
       <textarea class="form-control" placeholder="write a comment..." rows="3"></textarea>
       <br>

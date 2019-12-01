@@ -1,38 +1,25 @@
 package com.nc.edu.fapi.models;
 
-import java.util.Arrays;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
+
 
 public class Post {
     private long id;
-    private long authorId;
+    private long author;
     private String photoPath;
     private String text;
     private Date date;
-    private HashTag[] hashTags;
-
-    public Post(long id, long authorId, String photoPath, String text, Date date, HashTag[] hashTags) {
-        this.id = id;
-        this.authorId = authorId;
-        this.photoPath = photoPath;
-        this.text = text;
-        this.date = date;
-        this.hashTags = hashTags;
-    }
 
     public Post() {
     }
 
-    @Override
-    public String toString() {
-        return "Post{" +
-                "id=" + id +
-                ", authorId=" + authorId +
-                ", photoPath='" + photoPath + '\'' +
-                ", text='" + text + '\'' +
-                ", date=" + date +
-                ", hashTags=" + Arrays.toString(hashTags) +
-                '}';
+    public Post(long author, String photoPath, String text, Date date) {
+        this.author = author;
+        this.photoPath = photoPath;
+        this.text = text;
+        this.date = date;
     }
 
     public long getId() {
@@ -43,12 +30,12 @@ public class Post {
         this.id = id;
     }
 
-    public long getAuthorId() {
-        return authorId;
+    public long getAuthor() {
+        return author;
     }
 
-    public void setAuthorId(long authorId) {
-        this.authorId = authorId;
+    public void setAuthor(long author) {
+        this.author = author;
     }
 
     public String getPhotoPath() {
@@ -73,13 +60,5 @@ public class Post {
 
     public void setDate(Date date) {
         this.date = date;
-    }
-
-    public HashTag[] getHashTags() {
-        return hashTags;
-    }
-
-    public void setHashTags(HashTag[] hashTags) {
-        this.hashTags = hashTags;
     }
 }

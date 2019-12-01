@@ -13,6 +13,8 @@ export class UserService {
   private usersStorage: UserModel[];
   private users: Subject<UserModel[]> = new ReplaySubject(1);
   private user: Subject<UserModel> = new ReplaySubject(1);
+  private activeUser: Subject<UserModel> = new ReplaySubject(1);
+
   constructor(private httpClient: HttpClient) {
   }
 
@@ -34,22 +36,25 @@ export class UserService {
     );
     return countOfSubscribers;
   }
+
   public getNumberSubscribtions(id: string): number {
     let countOfSubscriptions: number;
     this.httpClient.get("/api/subscribers/" + id + "?count=true").subscribe((item: number) => {
-        countOfSubscriptions= item;
+        countOfSubscriptions = item;
       }
     );
     return countOfSubscriptions;
   }
+
   public getNumberPosts(id: string): number {
     let countOfPosts: number;
     this.httpClient.get("/api/posts/" + id + "?count=true").subscribe((item: number) => {
-        countOfPosts= item;
+        countOfPosts = item;
       }
     );
     return countOfPosts;
   }
+
   public getUser(id: string): Observable<UserModel> {
 
     this.httpClient.get("/api/user/" + id).subscribe((user: UserModel) => {
@@ -58,9 +63,28 @@ export class UserService {
     return this.user.asObservable();
   }
 
-  public saveUser(user: UserModel): Observable<UserModel> {
-    console.log("work saveUser method");
-    return this.httpClient.post<UserModel>('/api/users', user);
+  public getAuthUser(login: string, password: string): Observable<UserModel> {
+    this.httpClient.get("/api/user?login=" + login + "&password=" + password).subscribe((user: UserModel) => {//примитивная авторизация. как правильно, чтобы не через параметры, не используя post запрос
+      this.activeUser.next(user);
+    });
+    return this.user.asObservable();
+  }
+
+  public saveUser(user: UserModel, file: File): Observable<boolean> {
+    const formData: FormData = new FormData();
+    formData.append('file', file);
+    formData.append('name', user.name);
+    formData.append('surname', user.surname);
+    formData.append('aboutMe', user.aboutMe);
+    formData.append('login', user.login);
+    formData.append('password', user.password);
+    formData.append('email', user.email);
+
+    return this.httpClient.post('/api/users', formData).pipe(
+      map(() => {
+        return true;
+      })
+    );
   }
 
   public updateUser(user: UserModel): Observable<UserModel> {

@@ -11,8 +11,8 @@ import java.util.Optional;
 public interface UserService {
 
     List<User> findAll();
-    Optional<User> findById(long id);
     User save(User user);
     void delete(long id);
     User findByLogin(String login);
+    User findById(long id);
 }

@@ -13,10 +13,10 @@ public class LikeOrDislike {
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "post_id")
     private Post post;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="user_id")
     private User author;
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private TypeOfVote typeOfVote;
     private Date date;
 
