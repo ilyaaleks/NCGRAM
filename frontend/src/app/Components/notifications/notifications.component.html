@@ -6,17 +6,17 @@
       <textarea class="form-control" formControlName="text" style="resize:none" placeholder="write a text" rows="3"></textarea>
     </div>
       <div class="input-group p-1">
-        <input type="text" formControlName="tags" class="form-control" placeholder="About you" aria-label="Email"
+        <input type="text" formControlName="tags" class="form-control" placeholder="tags separated by spaces" aria-label="Email"
                aria-describedby="basic-addon3">
       </div>
     </div>
     <div class="alert alert-danger"
-         *ngIf="postForm.controls['about'].invalid && postForm.controls['about'].touched">
+         *ngIf="postForm.controls['tags'].invalid && postForm.controls['tags'].touched">
       Required field
     </div>
     <input type="file" name="file" formControlName="file" (change)="onFileChange($event.target.files)">
     <div class=" p-1">
-      <button *ngIf="postForm.valid" class="btn btn-info btn-block">Add post</button>
+      <button *ngIf="postForm.valid" class="btn btn-info btn-block"  mat-button [mat-dialog-close]="true" (click)="addPost()">Add post</button>
       <button *ngIf="!postForm.valid" disabled="disabled" class="btn btn-dark btn-block">Add post</button>
     </div>
   </form>

@@ -7,19 +7,37 @@ import java.util.Set;
 
 public class Post {
     private long id;
-    private long author;
+    private String authorLogin;
     private String photoPath;
     private String text;
     private Date date;
-
+    private Set<HashTag> hashTags;
+    private String hashTagsStr="";
     public Post() {
     }
 
-    public Post(long author, String photoPath, String text, Date date) {
-        this.author = author;
+    public String getAuthorLogin() {
+        return authorLogin;
+    }
+
+    public void setAuthorLogin(String authorLogin) {
+        this.authorLogin = authorLogin;
+    }
+
+    public Post(String authorLogin, String photoPath, String text, Date date, Set<HashTag> hashTags) {
+        this.authorLogin = authorLogin;
         this.photoPath = photoPath;
         this.text = text;
         this.date = date;
+        this.hashTags = hashTags;
+    }
+
+    public Set<HashTag> getHashTags() {
+        return hashTags;
+    }
+
+    public void setHashTags(Set<HashTag> hashTags) {
+        this.hashTags = hashTags;
     }
 
     public long getId() {
@@ -30,13 +48,6 @@ public class Post {
         this.id = id;
     }
 
-    public long getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(long author) {
-        this.author = author;
-    }
 
     public String getPhotoPath() {
         return photoPath;
@@ -60,5 +71,13 @@ public class Post {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getHashTagsStr() {
+        return hashTagsStr;
+    }
+
+    public void setHashTagsStr(String hashTagsStr) {
+        this.hashTagsStr = hashTagsStr;
     }
 }

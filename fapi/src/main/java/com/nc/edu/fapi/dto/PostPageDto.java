@@ -1,28 +1,30 @@
 package com.nc.edu.fapi.dto;
 
+import com.nc.edu.fapi.models.HashTag;
 import com.nc.edu.fapi.models.Post;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PostPageDto {
-    private List<Post> posts;
+    private List<PostDto> posts;
     private int currentPage;
     private int totalPage;
 
     public PostPageDto() {
     }
 
-    public PostPageDto(List<Post> posts, int currentPage, int totalPage) {
+    public PostPageDto(List<PostDto> posts, int currentPage, int totalPage) {
         this.posts = posts;
         this.currentPage = currentPage;
         this.totalPage = totalPage;
     }
 
-    public List<Post> getPosts() {
+    public List<PostDto> getPosts() {
         return posts;
     }
 
-    public void setPosts(List<Post> posts) {
+    public void setPosts(List<PostDto> posts) {
         this.posts = posts;
     }
 
@@ -41,4 +43,6 @@ public class PostPageDto {
     public void setTotalPage(int totalPage) {
         this.totalPage = totalPage;
     }
+
+
 }

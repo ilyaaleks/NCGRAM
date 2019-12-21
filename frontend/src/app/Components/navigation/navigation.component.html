@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="Index.html" routerLink="/story">{{title}}</a>
+    <a class="navbar-brand" href="Index.html" routerLink="/story">Instagram</a>
     <button class="navbar-toggler" type="button" data-target="#my-nav" data-toggle="collapse">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon">INSTAGRAM</span>
     </button>
 
     <div id="my-nav" class="collapse navbar-collapse justify-content-end">
@@ -20,11 +20,11 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/user">About</a>
+          <a class="nav-link" (click)="openAboutUser()">About</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/signout">Sign out</a>
+          <a class="nav-link" (click)="signout()">Sign out</a>
         </li>
       </ul>
     </div>

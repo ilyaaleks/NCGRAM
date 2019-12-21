@@ -10,17 +10,19 @@ import {DialogwindowComponent} from '../dialogwindow/dialogwindow.component';
 })
 export class PostComponent implements OnInit {
   @Input()
-  author="ilya";
+  author;
   @Input()
   description;
   @Input()
   date;
   @Input()
-  hashTags=["best"];
+  hashTags;
   @Input()
-  src=this.getUrl();
+  src
   @Input()
   id;
+  @Input()
+  authorPhotoPath;
 
 
 
@@ -28,7 +30,15 @@ export class PostComponent implements OnInit {
 
   }
   getUrl() {
-    return 'url(\'http://localhost:4200/assets/img/1508101437141939217.jpg\')';
+    if(this.authorPhotoPath!=null) {
+      return `url(\'http://localhost:8083/api/photo/${this.authorPhotoPath}\')`;
+    }
+  }
+  getPostUrl()
+  {
+    if(this.src!=null) {
+      return "http://localhost:8083/api/photo/" + this.src;
+    }
   }
   openDialog() {
     const dialogConfig = new MatDialogConfig();

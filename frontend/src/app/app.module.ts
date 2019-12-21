@@ -12,10 +12,9 @@ import {PublicationComponent} from './Components/publication/publication.compone
 import {MainComponent} from './Components/main/main.component';
 import {ActivityComponent} from './Components/activity/activity.component';
 import {RegistrationComponent} from './Components/registration/registration.component';
-import {RouterModule} from '@angular/router';
 import {RoutingmoduleModule} from './routingmodule/routingmodule.module';
 import {CommentComponent} from './Components/comment/comment.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {ModalModule} from 'ngx-bootstrap/modal';
 import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from '@angular/material';
 import {DialogwindowComponent} from './Components/dialogwindow/dialogwindow.component';
@@ -25,6 +24,8 @@ import {UserService} from "./service/user-service";
 import {PostService} from "./service/post.service";
 import {ScrollingModule} from "@angular/cdk/scrolling";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {InterceptorService} from "./service/interceptor.service";
+import {JwtInterceptor} from "./service/jwt-interceptor";
 
 @NgModule({
   entryComponents: [DialogwindowComponent, NotificationsComponent],
@@ -52,7 +53,11 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     BrowserAnimationsModule,
     NgbModule
   ],
-  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}, UserService,PostService],
+  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}, UserService,PostService,{
+    provide: HTTP_INTERCEPTORS,
+    useClass: InterceptorService,
+    multi: true
+  },JwtInterceptor],
   bootstrap: [AppComponent],
   exports: [MatDialogModule,ScrollingModule]
 })

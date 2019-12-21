@@ -1,8 +1,12 @@
+import {UserModel} from "./userModel";
+
 export interface PostModel {
   id:number;
-  authorName:string;
+  authorLogin:string;
+  authorPhotoPath?:string;
   photoPath:string;
   text:string;
   date:string;
-  hashTags:string[];
+  hashTags:string;
+
 }

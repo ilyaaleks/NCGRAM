@@ -1,12 +1,16 @@
 package com.nc.edu.backend.controller;
 
+import com.nc.edu.backend.converter.Converter;
 import com.nc.edu.backend.domain.LikeOrDislike;
+import com.nc.edu.backend.domain.Post;
 import com.nc.edu.backend.domain.User;
+import com.nc.edu.backend.dto.UserDto;
 import com.nc.edu.backend.service.UserService;
 import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ByteArrayResource;
+import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
@@ -24,19 +28,21 @@ import java.util.UUID;
 public class UserController {
     @Autowired
     private UserService userService;
-    @Value("${upload.path}")
-    private String uploadPath;
 
-    @GetMapping(value = "/{id}")
-    public ResponseEntity<User> getUserByLogin(@PathVariable(name = "id") long id) {
-        User user = userService.findById(id);
-        return ResponseEntity.ok(user);
+    @GetMapping("/{id}")
+    public ResponseEntity<UserDto> getUserById(@PathVariable() long id) {
+        Converter converter = new Converter();
+        User user=userService.findById(id);
+        user.setPhotoUrl(user.getPhotoUrl());
+        return ResponseEntity.ok(converter.convertToUserDto(user));
     }
 
-    @RequestMapping(value = "/login/{login}", method = RequestMethod.GET)
-    public ResponseEntity<User> getUserByLogin(@PathVariable(name = "login") String login) {//vs requestparam???
+    @GetMapping("/login/{login}")
+    public ResponseEntity<UserDto> getUserByLogin(@PathVariable(name = "login") String login) {//vs requestparam???
         User user = userService.findByLogin(login);
-        return ResponseEntity.ok(user);
+        Converter converter = new Converter();
+        UserDto userDto = converter.convertToUserDto(user);
+        return ResponseEntity.ok(userDto);
     }
 
     @GetMapping(value = "")
@@ -45,32 +51,51 @@ public class UserController {
     }
 
     @PostMapping
-    public User saveUser(@RequestParam("file")  String fileStr,
-                         @RequestParam String name,
+    public User saveUser(@RequestParam("file") String fileStr,
                          @RequestParam String fileName,
+                         @RequestParam String name,
                          @RequestParam String surname,
                          @RequestParam String aboutMe,
                          @RequestParam String login,
                          @RequestParam String password,
                          @RequestParam String email) throws IOException {
-        User user=new User(name,surname,email,aboutMe,login,password,null,null,null,null,null,null,null,null);
-        String decoded = new String(Base64.getDecoder().decode(fileStr));
-        byte[] file = Base64.getDecoder().decode(fileStr);
-        if (file != null) {
-            File uploadDir = new File(uploadPath);//и перенести все в сервис?
-            if (!uploadDir.exists()) {//еще раз спросить про реализацию раздачи картинки
-                uploadDir.mkdir();
-            }
-            String uuidFile = UUID.randomUUID().toString();
-            String resultFilename = uuidFile + "." + fileName;//теперь не могу отобразить картинку
-            try (FileOutputStream fos = new FileOutputStream(uploadPath+"/"+resultFilename)) {
-                fos.write(file);
-                fos.close();
-            }
+        User user = new User(name, surname, email, aboutMe, login, password, null, null, null, null, null, null, null, null);
 
-
-            user.setPhotoUrl(resultFilename);
-        }
-        return userService.save(user);
+        return userService.save(user, fileStr, fileName);
     }
+
+    @GetMapping("/subscribers/count/{userId}")
+    public UserDto getCountOfSubscribers(@PathVariable() long userId) {
+        return userService.getCountOfSubscribers(userId);
+    }
+
+    @GetMapping("/subscriptions/count/{userId}")
+    public UserDto getCountOfSubscribtions(@PathVariable() long userId) {
+        return userService.getCountOfSubscribtions(userId);
+    }
+    @GetMapping("/subscribe")
+    public UserDto subscribe(@RequestParam int userId,
+                            @RequestParam int currentUserId)
+    {
+        return userService.subscribe(userId, currentUserId);
+
+    }
+    @GetMapping("/unsubscribe")
+    public UserDto unsubscribe(@RequestParam int userId,
+                              @RequestParam int currentUserId)
+    {
+        return userService.unsubscribe(userId, currentUserId);
+    }
+
+    @GetMapping("/subscribers/{userId}")
+    public List<UserDto> getSubscribers(@PathVariable() long userId) {
+        return userService.getSubscribers(userId);
+    }
+
+    @GetMapping("/subscriptions/{userId}")
+    public List<UserDto> getSubscriptions(@PathVariable() long userId) {
+        return userService.getSubscriptions(userId);
+    }
+
+
 }

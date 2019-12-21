@@ -31,12 +31,12 @@
 
 
         <div class=" p-1">
-          <button class="btn btn-danger btn-block" [disabled]="!authForm.valid" id="Sign_in" routerLink="/story">Sign in</button>
+          <button class="btn btn-danger btn-block" [disabled]="!authForm.valid" id="Sign_in" (click)="authUser()">Sign in</button>
         </div>
         <p class="text-muted">or</p>
         <div class=" p-1">
           <!--как получать обратно статус сервера, а так же, по необходимости, самому генерировать код ошибки со стороны сервера, чтобы при регистрации показывать, где человек ошибся -->
-          <button class="btn btn-success btn-block" routerLink="/registration" id="Register" (click)="authUser()">Register</button>
+          <button class="btn btn-success btn-block" routerLink="/registration" id="Register">Register</button>
         </div>
       </div>
     </form>

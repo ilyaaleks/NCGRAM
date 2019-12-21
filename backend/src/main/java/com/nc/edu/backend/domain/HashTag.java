@@ -3,6 +3,7 @@ package com.nc.edu.backend.domain;
 import javax.persistence.*;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -28,6 +29,10 @@ public class HashTag {
         this.posts = posts;
     }
 
+    public HashTag(String text) {
+        this.text = text;
+    }
+
     public long getId() {
         return id;
     }
@@ -50,5 +55,19 @@ public class HashTag {
 
     public void setPosts(Set<Post> posts) {
         this.posts = posts;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        HashTag hashTag = (HashTag) o;
+        return Objects.equals(text, hashTag.text);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(text);
     }
 }

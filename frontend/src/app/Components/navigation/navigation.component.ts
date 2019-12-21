@@ -2,6 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {DialogwindowComponent} from '../dialogwindow/dialogwindow.component';
 import {NotificationsComponent} from '../notifications/notifications.component';
+import {UserService} from "../../service/user-service";
+import {UserModel} from "../../Model/userModel";
+import {Router} from "@angular/router";
+import {AuthService} from "../../service/auth.service";
 
 @Component({
   selector: 'app-navigation',
@@ -9,9 +13,11 @@ import {NotificationsComponent} from '../notifications/notifications.component';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-  title: any = 'INSTAGRAM';
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog,
+              public userService:UserService,
+              private authService:AuthService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -21,5 +27,16 @@ export class NavigationComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.width = '50%';
     this.dialog.open(NotificationsComponent, dialogConfig);
+  }
+  openAboutUser()
+  {
+    this.userService.activeUser.subscribe((user:UserModel)=>
+    {
+      this.router.navigate(['/user/'+user.id]);
+    })
+  }
+  signout()
+  {
+    this.authService.logout();
   }
 }

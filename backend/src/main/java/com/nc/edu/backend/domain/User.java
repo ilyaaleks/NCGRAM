@@ -3,6 +3,7 @@ package com.nc.edu.backend.domain;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -14,6 +15,10 @@ public class User {
     private String name;
     private String surname;
     private String email;
+
+    public User(String name, String surname, String email, String aboutMe, String login, String password, String role, String status, String photoUrl) {
+    }
+
     public Set<User> getSubscribers() {
         return subscribers;
     }
@@ -78,6 +83,19 @@ public class User {
         this.claims = claims;
         this.subscribers = subscribers;
         this.subscriptions = subscriptions;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 
     public Set<User> getSubscriptions() {

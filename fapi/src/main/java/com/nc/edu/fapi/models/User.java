@@ -31,6 +31,19 @@ public class User {
         this.photoUrl = photoUrl;
     }
 
+    public User(long id, String name, String surname, String email, String aboutMe, String login, String password, String role, String status, String photoUrl) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.aboutMe = aboutMe;
+        this.login = login;
+        this.password = password;
+        this.role = role;
+        this.status = status;
+        this.photoUrl = photoUrl;
+    }
+
     public long getId() {
         return id;
     }

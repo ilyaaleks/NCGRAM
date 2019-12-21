@@ -1,22 +1,50 @@
-import {Injectable} from '@angular/core';
+import {Injectable, OnDestroy} from '@angular/core';
 import {UserModel} from '../Model/userModel';
 import {Observable, ReplaySubject, Subject} from 'rxjs';
 import {HttpService} from './http.service';
 import {map} from "rxjs/operators";
 import {HttpClient} from "@angular/common/http";
 import {post} from "selenium-webdriver/http";
+import {JwtHelper} from "angular2-jwt";
+import {JwtHelperService} from "@auth0/angular-jwt";
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class UserService{
+  isAdmin: boolean;
   private usersStorage: UserModel[];
   private users: Subject<UserModel[]> = new ReplaySubject(1);
   private user: Subject<UserModel> = new ReplaySubject(1);
-  private activeUser: Subject<UserModel> = new ReplaySubject(1);
-
+  private _activeUser: Subject<UserModel> = new ReplaySubject(1);
+  private countOfSubscribers:Subject<number>=new ReplaySubject(1);
+  private countOfSubscriptions: Subject<number>=new ReplaySubject(1);
+  private countOfPosts: Subject<number>=new ReplaySubject(1);
   constructor(private httpClient: HttpClient) {
+    let token=localStorage.getItem("token");
+    const helper = new JwtHelperService();
+    const decodedToken = helper.decodeToken(token);
+    if(token!=null) {
+      let user: UserModel = {
+        id: decodedToken.id,
+        name: decodedToken.name,
+        surname: decodedToken.surname,
+        aboutMe: decodedToken.aboutMe,
+        login: decodedToken.sub,
+        password: null,
+        role: decodedToken.scopes,
+        status: decodedToken.status,
+        photoUrl: decodedToken.photoUrl,
+        email: decodedToken.email,
+      }
+      this.activeUser.next(user);
+    }
+    else
+    {
+      this.activeUser.next(null);
+    }
   }
+
 
   public getUsers(): Observable<UserModel[]> {
     if (!this.users) {
@@ -28,31 +56,59 @@ export class UserService {
     return this.users.asObservable();
   }
 
-  public getNumberSubscribers(id: string): number {
-    let countOfSubscribers: number;
-    this.httpClient.get("/api/subscribtions/" + id + "?count=true").subscribe((item: number) => {
-        countOfSubscribers = item;
+
+  public subscribe(id:number):void{
+    this.activeUser.subscribe((user:UserModel)=>
+    {
+      if(user.id!==id)
+      {
+        this.httpClient.get('/api/user/subscribe?userId='+id+"&currentUserId="+user.id).subscribe((users: UserModel[]) => {
+
+        })
       }
-    );
-    return countOfSubscribers;
+    })
+  }
+  public unsubscribe(id:number):void{
+    this.activeUser.subscribe((user:UserModel)=>
+    {
+      if(user.id!==id)
+      {
+        this.httpClient.get('/api/user/unsubscribe?userId='+id).subscribe((users: UserModel[]) => {
+
+        })
+      }
+    })
+  }
+  get activeUser(): Subject<UserModel> {
+    return this._activeUser;
   }
 
-  public getNumberSubscribtions(id: string): number {
-    let countOfSubscriptions: number;
-    this.httpClient.get("/api/subscribers/" + id + "?count=true").subscribe((item: number) => {
-        countOfSubscriptions = item;
+  public getNumberSubscribers(id: string): Observable<number> {
+
+    this.httpClient.get("/api/subscribers/count/" + id).subscribe((item: number) => {
+        this.countOfSubscribers.next(item);
+
       }
     );
-    return countOfSubscriptions;
+    return this.countOfSubscribers.asObservable();
   }
 
-  public getNumberPosts(id: string): number {
-    let countOfPosts: number;
+  public getNumberSubscribtions(id: string): Observable<number> {
+
+    this.httpClient.get("/api/subscribtions/count/" + id).subscribe((item: number) => {
+        this.countOfSubscriptions.next(item);
+      }
+    );
+    return this.countOfSubscriptions.asObservable();
+  }
+
+  public getNumberPosts(id: string): Observable<number> {
+
     this.httpClient.get("/api/posts/" + id + "?count=true").subscribe((item: number) => {
-        countOfPosts = item;
+        this.countOfPosts.next(item);
       }
     );
-    return countOfPosts;
+    return this.countOfPosts.asObservable();
   }
 
   public getUser(id: string): Observable<UserModel> {
@@ -63,12 +119,6 @@ export class UserService {
     return this.user.asObservable();
   }
 
-  public getAuthUser(login: string, password: string): Observable<UserModel> {
-    this.httpClient.get("/api/user?login=" + login + "&password=" + password).subscribe((user: UserModel) => {//примитивная авторизация. как правильно, чтобы не через параметры, не используя post запрос
-      this.activeUser.next(user);
-    });
-    return this.user.asObservable();
-  }
 
   public saveUser(user: UserModel, file: File): Observable<boolean> {
     const formData: FormData = new FormData();
@@ -98,6 +148,9 @@ export class UserService {
       return this.httpClient.delete<void>("api/user/" + user.id);
     }
   }
-
+  public isAdminUser():boolean
+  {
+    return this.isAdmin;
+  }
 
 }

@@ -6,13 +6,14 @@ import {AboutUserComponent} from '../Components/about-user/about-user.component'
 import {RegistrationComponent} from '../Components/registration/registration.component';
 import {StoryMenuComponent} from '../Components/story-menu/story-menu.component';
 import {ActivityComponent} from '../Components/activity/activity.component';
+import {AuthGuard} from "../Guards/auth.guard";
 
 const appRoutes: Routes = [
   {path: 'home', component: MainComponent},
-  {path: 'user/:login', component: AboutUserComponent},
+  {path: 'user/:id', component: AboutUserComponent,canActivate:[AuthGuard]},
   {path: 'signout', component: MainComponent},
   {path: 'registration', component: RegistrationComponent},
-  {path: 'story', component: ActivityComponent},
+  {path: 'story', component: ActivityComponent,canActivate:[AuthGuard]},
   {
     path: '', redirectTo: '/home', pathMatch: 'full'
   },
@@ -28,8 +29,7 @@ const appRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(
-      appRoutes, {enableTracing: true}
-    )
+      appRoutes, {enableTracing: true,onSameUrlNavigation: 'reload'}    )
 
   ],
   exports: [
