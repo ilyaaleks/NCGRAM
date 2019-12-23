@@ -73,7 +73,7 @@ export class UserService{
     {
       if(user.id!==id)
       {
-        this.httpClient.get('/api/user/unsubscribe?userId='+id).subscribe((users: UserModel[]) => {
+        this.httpClient.get('/api/user/unsubscribe?userId='+id+"&currentUserId="+user.id).subscribe((users: UserModel[]) => {
 
         })
       }
@@ -85,8 +85,8 @@ export class UserService{
 
   public getNumberSubscribers(id: string): Observable<number> {
 
-    this.httpClient.get("/api/subscribers/count/" + id).subscribe((item: number) => {
-        this.countOfSubscribers.next(item);
+    this.httpClient.get("/api/subscribers/count/" + id).subscribe((item: UserModel) => {
+        this.countOfSubscribers.next(item.countOfSubscribers);
 
       }
     );
@@ -95,8 +95,8 @@ export class UserService{
 
   public getNumberSubscribtions(id: string): Observable<number> {
 
-    this.httpClient.get("/api/subscribtions/count/" + id).subscribe((item: number) => {
-        this.countOfSubscriptions.next(item);
+    this.httpClient.get("/api/subscribtions/count/" + id).subscribe((item: UserModel) => {
+        this.countOfSubscriptions.next(item.countOfSubscribtions);
       }
     );
     return this.countOfSubscriptions.asObservable();
@@ -112,9 +112,10 @@ export class UserService{
   }
 
   public getUser(id: string): Observable<UserModel> {
-
-    this.httpClient.get("/api/user/" + id).subscribe((user: UserModel) => {
-      this.user.next(user);
+    this.activeUser.subscribe((user:UserModel)=>{
+      this.httpClient.get("/api/user/" + id+"?activeUserId="+user.id).subscribe((user: UserModel) => {
+        this.user.next(user);
+      })
     })
     return this.user.asObservable();
   }

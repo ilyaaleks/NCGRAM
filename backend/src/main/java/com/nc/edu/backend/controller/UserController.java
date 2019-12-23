@@ -19,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.Base64;
 import java.util.List;
 import java.util.UUID;
@@ -30,15 +31,26 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDto> getUserById(@PathVariable() long id) {
+    public ResponseEntity<UserDto> getUserById(@PathVariable() long id, @RequestParam long activeUserId) throws UserPrincipalNotFoundException {
         Converter converter = new Converter();
         User user=userService.findById(id);
+        User activeUser=userService.findById(activeUserId);
         user.setPhotoUrl(user.getPhotoUrl());
-        return ResponseEntity.ok(converter.convertToUserDto(user));
+        UserDto userDto=converter.convertToUserDto(user);
+        if(user.getSubscribers().contains(activeUser))
+        {
+            userDto.setSubscribed(true);
+        }
+        else
+        {
+            userDto.setSubscribed(false);
+        }
+
+        return ResponseEntity.ok(userDto);
     }
 
     @GetMapping("/login/{login}")
-    public ResponseEntity<UserDto> getUserByLogin(@PathVariable(name = "login") String login) {//vs requestparam???
+    public ResponseEntity<UserDto> getUserByLogin(@PathVariable(name = "login") String login) throws UserPrincipalNotFoundException {//vs requestparam???
         User user = userService.findByLogin(login);
         Converter converter = new Converter();
         UserDto userDto = converter.convertToUserDto(user);
@@ -75,25 +87,23 @@ public class UserController {
     }
     @GetMapping("/subscribe")
     public UserDto subscribe(@RequestParam int userId,
-                            @RequestParam int currentUserId)
-    {
+                            @RequestParam int currentUserId) throws UserPrincipalNotFoundException {
         return userService.subscribe(userId, currentUserId);
 
     }
     @GetMapping("/unsubscribe")
     public UserDto unsubscribe(@RequestParam int userId,
-                              @RequestParam int currentUserId)
-    {
+                              @RequestParam int currentUserId) throws UserPrincipalNotFoundException {
         return userService.unsubscribe(userId, currentUserId);
     }
 
     @GetMapping("/subscribers/{userId}")
-    public List<UserDto> getSubscribers(@PathVariable() long userId) {
+    public List<UserDto> getSubscribers(@PathVariable() long userId) throws UserPrincipalNotFoundException {
         return userService.getSubscribers(userId);
     }
 
     @GetMapping("/subscriptions/{userId}")
-    public List<UserDto> getSubscriptions(@PathVariable() long userId) {
+    public List<UserDto> getSubscriptions(@PathVariable() long userId) throws UserPrincipalNotFoundException {
         return userService.getSubscriptions(userId);
     }
 

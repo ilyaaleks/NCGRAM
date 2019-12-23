@@ -71,7 +71,19 @@ public class PostService {
 
     public PostPageDto getUserPosts(long userId, Pageable pageable) {
         RestTemplate restTemplate = new RestTemplate();
-        PostPageDto posts= restTemplate.getForObject(backendServerUrl + "/api/posts?userId="+userId+"page="+pageable.getPageNumber()+"&size=5&sort=id,DESC", PostPageDto.class);
+        PostPageDto posts= restTemplate.getForObject(backendServerUrl + "/api/posts/userPosts/"+userId+"?page="+pageable.getPageNumber()+"&size=5&sort=id,DESC", PostPageDto.class);
+        return posts;
+    }
+
+    public PostPageDto getPostsByTag(long tagId, Pageable pageable) {
+        RestTemplate restTemplate = new RestTemplate();
+        PostPageDto posts= restTemplate.getForObject(backendServerUrl + "/api/posts/postsByTag/"+tagId+"?page="+pageable.getPageNumber()+"&size=5&sort=id,DESC", PostPageDto.class);
+        return posts;
+    }
+
+    public PostPageDto getSubscribtionPosts(long userId, Pageable page) {
+        RestTemplate restTemplate = new RestTemplate();
+        PostPageDto posts= restTemplate.getForObject(backendServerUrl + "/api/posts/subscribtionPosts/"+userId+"?page="+page.getPageNumber()+"&size=5&sort=id,DESC", PostPageDto.class);
         return posts;
     }
 }

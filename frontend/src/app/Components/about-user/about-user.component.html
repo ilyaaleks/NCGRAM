@@ -6,10 +6,16 @@
 
   <div class="cols-sm-8 float-left ml-4">
     <p class="text-dark d-inline">@{{user.login}}</p>
-    <button type="button" class="btn-light  d-inline rounded">Редактировать профиль</button>
-    <button type="button" class="btn-danger rounded">Настройки</button>
-    <button *ngIf="pageOfCurrentUser && !isSubscribed" type="button" class="btn-info d-inline rounded" (click)="subscribe()">Подписаться</button>
-    <button *ngIf="pageOfCurrentUser && isSubscribed" type="button" class="btn-info d-inline rounded" (click)="unsubscribe">Отписаться</button>
+    <button type="button" class="btn-light  d-inline rounded" *ngIf="!pageOfCurrentUser">Редактировать профиль</button>
+    <button type="button" class="btn-danger rounded" *ngIf="!pageOfCurrentUser">Настройки</button>
+    <span *ngIf="pageOfCurrentUser && !user.subscribed">
+    <button type="button" class="btn-info d-inline rounded"
+            (click)="subscribe()">Подписаться</button>
+      </span>
+    <span *ngIf="pageOfCurrentUser  && user.subscribed">
+    <button type="button" class="btn-info d-inline rounded"
+            (click)="unsubscribe()">Отписаться</button>
+    </span>
     <div class="d-flex  mt-4">
       <div class="col-sm-3 d-flex">
         <p class="text-info d-flex">{{countOfPosts}} публикаций</p>
@@ -18,19 +24,32 @@
 
       </div>
       <div class="col-sm-3 d-flex">
-        <p class="text-info d-flex">{{countOfSubscribers}} подписчиков</p>
+        <p class="text-info d-flex">{{countOfSubscriptions}} подписчиков</p>
       </div>
       <div class="col-sm-1 d-flex">
 
       </div>
       <div class="col-sm-3 d-flex">
-        <p class="text-info d-flex">{{countOfSubscriptions}} подписок</p>
+        <p class="text-info d-flex">{{countOfSubscribers}} подписок</p>
       </div>
 
     </div>
   </div>
 </div>
-<app-publication *ngIf="countOfPosts===0; else postsExist"></app-publication>
-<ng-template ><!--#postsExists -->
-  Please friend, login.
-</ng-template>
+<app-publication *ngIf="countOfPosts===0"></app-publication>
+<div *ngIf="countOfPosts!==0">
+  <div *ngFor="let item of posts">
+    <app-post class="justify-content-center d-flex col-8" [author]="item.authorLogin"
+              [description]="item.text"
+              [date]="item.date"
+              [_hashTags]="item.hashTags"
+              [src]="item.photoPath"
+              [authorPhotoPath]="item.authorPhotoPath"
+              [_authorId]="item.authorId"
+              [id]="item.id">
+
+    </app-post>
+  </div>
+  <ngb-pagination [collectionSize]="countOfPosts" [pageSize]="itemsPerPage" [(page)]="page" [maxSize]="7"
+                  [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+</div>

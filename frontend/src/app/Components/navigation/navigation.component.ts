@@ -27,6 +27,7 @@ export class NavigationComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.width = '50%';
     this.dialog.open(NotificationsComponent, dialogConfig);
+
   }
   openAboutUser()
   {

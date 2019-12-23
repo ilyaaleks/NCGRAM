@@ -9,5 +9,7 @@ export interface UserModel {
   status:string;
   photoUrl:string;
   email:string;
-  isSubscribed?:boolean;
+  subscribed?:boolean;
+  countOfSubscribers?:number;
+  countOfSubscribtions?:number;
 }

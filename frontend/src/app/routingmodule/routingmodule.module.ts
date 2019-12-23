@@ -17,6 +17,7 @@ const appRoutes: Routes = [
   {
     path: '', redirectTo: '/home', pathMatch: 'full'
   },
+  {path:'story/:tag', component:ActivityComponent,canActivate:[AuthGuard]},
   {
     path: '**', component: MainComponent
   }

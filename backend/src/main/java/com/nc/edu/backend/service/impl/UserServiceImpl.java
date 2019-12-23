@@ -3,11 +3,16 @@ package com.nc.edu.backend.service.impl;
 import com.nc.edu.backend.converter.Converter;
 import com.nc.edu.backend.domain.Post;
 import com.nc.edu.backend.domain.User;
+import com.nc.edu.backend.dto.PostDto;
+import com.nc.edu.backend.dto.PostPageDto;
 import com.nc.edu.backend.dto.UserDto;
+import com.nc.edu.backend.dto.UserPageDto;
 import com.nc.edu.backend.repository.UserRepository;
 import com.nc.edu.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.Convert;
@@ -15,6 +20,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.*;
 
 @Service
@@ -102,7 +108,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDto unsubscribe(int userId, int currentUserId){
+    public UserDto unsubscribe(int userId, int currentUserId) throws UserPrincipalNotFoundException {
         User user=findById(userId);
         User currentUser=findById(currentUserId);
         user.getSubscribers().remove(currentUser);
@@ -114,7 +120,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDto subscribe(int userId, int currentUserId){
+    public UserDto subscribe(int userId, int currentUserId) throws UserPrincipalNotFoundException {
         User user=findById(userId);
         User currentUser=findById(currentUserId);
         user.getSubscribers().add(currentUser);
@@ -126,7 +132,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserDto> getSubscribers(long userId) {
+    public List<UserDto> getSubscribers(long userId) throws UserPrincipalNotFoundException {
         User user=userRepository.findById(userId);
         List<UserDto> subscribers=new ArrayList<>();
         Converter converter=new Converter();
@@ -138,14 +144,20 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserDto> getSubscriptions(long userId) {
-        User user=userRepository.findById(userId);
-        List<UserDto> subscriptions=new ArrayList<>();
-        Converter converter=new Converter();
-        for(User subscibtion:user.getSubscriptions())
-        {
-            subscriptions.add(converter.convertToUserDto(subscibtion));
+    public UserPageDto getSubscriptions(long userId, Pageable pageable) throws UserPrincipalNotFoundException {
+        Page<User> page = userRepository.findSubscriptions(userId,pageable);
+        List<User> userList = page.getContent();
+        List<UserDto> userDtos = new ArrayList<>();
+        Converter converter = new Converter();
+        UserDto userDto;
+        for (User user : userList) {
+            userDto=converter.convertToUserDto(user);
+            postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
+            postDtoList.add(converter.converToPostDto(post));
         }
-        return subscriptions;
+        return new PostPageDto(postDtoList,
+                pageable.getPageNumber(),
+                page.getTotalPages());
     }
+
 }

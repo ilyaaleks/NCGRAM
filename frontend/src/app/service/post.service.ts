@@ -11,13 +11,16 @@ import {UserModel} from "../Model/userModel";
   providedIn: 'root'
 })
 export class PostService {
-
+  private _newPost:Subject<PostModel>=new ReplaySubject(1);
   private posts: Subject<PostModel[]> = new ReplaySubject(1);
   private postPages: Subject<PostPageDto> = new ReplaySubject(1);
   private post: Subject<PostModel> = new ReplaySubject(1);
 
-  constructor(private httpClient: HttpClient,
-              private userService: UserService) {
+  constructor(private httpClient: HttpClient) {
+  }
+
+  get newPost(): Subject<PostModel> {
+    return this._newPost;
   }
 
   public getPageablePost() {
@@ -36,11 +39,20 @@ export class PostService {
 
   public getUserPosts(page: number,userId:number): Observable<PostPageDto> {
 
-    this.httpClient.get('/api/posts/'+userId+'?page=' + page + '&size=5&sort=id,DESC').subscribe((postPages: PostPageDto) => {//посмотреть и потом поменять
+    this.httpClient.get('/api/userPosts/'+userId+'?page=' + page + '&size=5&sort=id,DESC').subscribe((postPages: PostPageDto) => {//посмотреть и потом поменять
       this.posts.next(postPages.posts);
       this.postPages.next(postPages);
     });
 
+    return this.postPages.asObservable();
+  }
+
+  public getSubscriptionsPosts(page,userId:number):Observable<PostPageDto>
+  {
+    this.httpClient.get('/api/subscribtionPosts/'+userId+'?page=' + page + '&size=5&sort=id,DESC').subscribe((postPages:PostPageDto)=>{
+      this.posts.next(postPages.posts);
+      this.postPages.next(postPages);
+    })
     return this.postPages.asObservable();
   }
 
@@ -51,6 +63,15 @@ export class PostService {
     return this.post.asObservable();
   }
 
+  public getPostsByTag(tag:string,page: number)
+  {
+    this.httpClient.get('/api/postsByTag/'+tag+'?page=' + page + '&size=5&sort=id,DESC').subscribe((postPages: PostPageDto) => {
+      this.posts.next(postPages.posts);
+      this.postPages.next(postPages);
+    });
+
+    return this.postPages.asObservable()
+  }
 
   public savePost(file: File, post: PostModel): Observable<PostModel> {
     const formData: FormData = new FormData();
@@ -77,4 +98,6 @@ export class PostService {
       return this.httpClient.delete<void>("api/post/" + post.id);
     }
   }
+  //public setLike()
+
 }

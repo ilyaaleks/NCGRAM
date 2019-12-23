@@ -29,9 +29,9 @@ public class UserService {
     @Autowired
     private MyUserDetailsService userDetailsService;
 
-    public User findById(long id) {
+    public User findById(long id, long activeUserId) {
         RestTemplate restTemplate = new RestTemplate();
-        User user = restTemplate.getForObject(backendServerUrl + "/api/user/" + id, User.class);
+        User user = restTemplate.getForObject(backendServerUrl + "/api/user/" + id+"?activeUserId="+activeUserId, User.class);
         return user;
     }
 
@@ -79,16 +79,16 @@ public class UserService {
     }
 
 
-    public int getCountOfSubscribers(long userId) {
+    public UserDto getCountOfSubscribers(long userId) {
         RestTemplate restTemplate=new RestTemplate();
         UserDto userDto=restTemplate.getForObject(backendServerUrl+"/api/user/subscribers/count/"+userId,UserDto.class);
-        return userDto.getCountOfPosts();
+        return userDto;
     }
 
-    public int getCountOfSubscribtions(long userId) {
+    public UserDto getCountOfSubscribtions(long userId) {
         RestTemplate restTemplate=new RestTemplate();
         UserDto userDto=restTemplate.getForObject(backendServerUrl+"/api/user/subscriptions/count/"+userId,UserDto.class);
-        return userDto.getCountOfPosts();
+        return userDto;
     }
 
     public UserDto subscribe(long userId, long currentUser) {

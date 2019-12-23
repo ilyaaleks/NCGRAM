@@ -5,10 +5,11 @@
       <app-post [author]="item.authorLogin"
                 [description]="item.text"
                 [date]="item.date"
-                [hashTags]="item.hashTags"
+                [_hashTags]="item.hashTags"
                 [src]="item.photoPath"
                 [authorPhotoPath]="item.authorPhotoPath"
-                  [id]="item.id"></app-post>
+                [id]="item.id"
+                [_authorId]="item.authorId"></app-post>
     </span>
 
 
@@ -21,6 +22,7 @@
   </div>
 
 </div>
-<ngb-pagination [collectionSize]="totalItems" [pageSize]="itemsPerPage" [(page)]="page" [maxSize]="7" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+<ngb-pagination [collectionSize]="totalItems" [pageSize]="itemsPerPage" [(page)]="page" [maxSize]="7" [rotate]="true"
+                (pageChange)="loadPage($event)"></ngb-pagination>
 
 <!--<img src="/api/image/url"/>-->

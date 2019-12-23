@@ -20,8 +20,9 @@ public class UserController {
 
 
     @GetMapping("/user/{id}")
-    public User getUserById(@PathVariable long id) {
-        return userService.findById(id);
+    public User getUserById(@PathVariable long id,
+                            @RequestParam long activeUserId) {
+        return userService.findById(id, activeUserId);
     }
 
     @GetMapping("/users")
@@ -52,13 +53,13 @@ public class UserController {
     }
 
     @GetMapping("/subscribers/count/{userId}")
-    public int getCountOfSubscribers(@PathVariable long userId)
+    public UserDto getCountOfSubscribers(@PathVariable long userId)
     {
         return userService.getCountOfSubscribers(userId);
     }
 
     @GetMapping("/subscribtions/count/{userId}")
-    public int getCountOfSubscribtions(@PathVariable long userId)
+    public UserDto getCountOfSubscribtions(@PathVariable long userId)
     {
         return userService.getCountOfSubscribtions(userId);
     }

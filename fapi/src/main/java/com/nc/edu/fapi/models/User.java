@@ -16,6 +16,7 @@ public class User {
     private String role;
     private String status;
     private String photoUrl;
+    private boolean subscribed;
     public User() {
     }
 
@@ -42,6 +43,14 @@ public class User {
         this.role = role;
         this.status = status;
         this.photoUrl = photoUrl;
+    }
+
+    public boolean isSubscribed() {
+        return subscribed;
+    }
+
+    public void setSubscribed(boolean subscribed) {
+        this.subscribed = subscribed;
     }
 
     public long getId() {

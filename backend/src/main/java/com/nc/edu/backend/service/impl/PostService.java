@@ -56,6 +56,7 @@ public class PostService {
 
     public PostDto save(Post post, String fileStr, String fileName, String hashTags) {
         String decoded = new String(Base64.getDecoder().decode(fileStr));
+        Set<HashTag> tagList = new HashSet<>();
         byte[] file = Base64.getDecoder().decode(fileStr);
         if (file != null) {
             File uploadDir = new File(uploadPath);
@@ -74,7 +75,7 @@ public class PostService {
             }
             post.setPhotoPath(resultFilename);
             post =postRepository.save(post);
-            Set<HashTag> tagList = new HashSet<>();
+
             if (hashTags != null && !hashTags.equals("")) {
                 String[] tags = hashTags.split("#");
                 for (String tag : tags) {
@@ -93,9 +94,11 @@ public class PostService {
                     }
                 }
             }
-            Iterable<HashTag> hashTagsObj = tagRepository.saveAll(tagList);
+
         }
+        Iterable<HashTag> hashTagsObj = tagRepository.saveAll(tagList);
         Converter converter=new Converter();
+        post.setHashTags(new HashSet<HashTag>((Collection)hashTagsObj) );
         return converter.converToPostDto(post);
     }
 
@@ -122,6 +125,38 @@ public class PostService {
 
     public PostPageDto getPostOfAuthor(long userId,Pageable pageable) {
         Page<Post> page = postRepository.findByAuthor(userId,pageable);
+        List<Post> postList = page.getContent();
+        List<PostDto> postDtoList = new ArrayList<>();
+        Converter converter = new Converter();
+        PostDto postDto;
+        for (Post post : postList) {
+            postDto=converter.converToPostDto(post);
+            postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
+            postDtoList.add(converter.converToPostDto(post));
+        }
+        return new PostPageDto(postDtoList,
+                pageable.getPageNumber(),
+                page.getTotalPages());
+    }
+
+    public PostPageDto getPostsByTag(long tagId, Pageable pageable) {
+        Page<Post> page = postRepository.findByTag(tagId,pageable);
+        List<Post> postList = page.getContent();
+        List<PostDto> postDtoList = new ArrayList<>();
+        Converter converter = new Converter();
+        PostDto postDto;
+        for (Post post : postList) {
+            postDto=converter.converToPostDto(post);
+            postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
+            postDtoList.add(converter.converToPostDto(post));
+        }
+        return new PostPageDto(postDtoList,
+                pageable.getPageNumber(),
+                page.getTotalPages());
+    }
+
+    public PostPageDto getSubscribtionPosts(long userId, Pageable pageable) {
+        Page<Post> page = postRepository.findBySubscription(userId,pageable);
         List<Post> postList = page.getContent();
         List<PostDto> postDtoList = new ArrayList<>();
         Converter converter = new Converter();

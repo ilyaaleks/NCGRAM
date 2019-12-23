@@ -1,9 +1,9 @@
 <div class="card img_wrap">
   <div class="card-header border-success">
     <span class="image_span float-left" [ngStyle]="{'background-image': getUrl()}"></span>
-    <h6 class="ml-3 mt-3 card-title float-left">{{author}}</h6>
-
-    <i class="fas fa-ellipsis-h float-right" (click)="openDialog()" ></i>
+    <h6 class="ml-3 mt-3 card-title float-left"><a [href]="authorId">{{author}}</a></h6>
+    <i *ngIf="activeUser" class="far fa-trash-alt float-right "></i>
+    <i class="fas fa-ellipsis-h float-right mr-2" (click)="openDialog()" ></i>
   </div>
   <div class="card-body">
     <img class="card-img-top " [src]="getPostUrl()"/>
@@ -11,16 +11,16 @@
   <div class="card-footer">
     <section>
       <span>
-        <button class="mark_button">
+        <button *ngIf="!activeUser" class="mark_button">
           <i class="far fa-thumbs-up large_icon"></i>
         </button>
       </span>
       <span>
-        <button class="mark_button"><i class="far fa-thumbs-down large_icon"></i></button>
+        <button class="mark_button" *ngIf="!activeUser"><i class="far fa-thumbs-down large_icon"></i></button>
       </span>
     </section>
     <p class="card-text">{{description}}</p>
-    <p class="card-text"><a [href]="item" *ngFor="let item of hashTags">{{"#"+item.text+" "}}</a></p>
+    <p class="card-text"><a [href]='"http://localhost:4200/story/"+item.id' *ngFor="let item of _hashTags">{{"#"+item.text+" "}}</a></p>
     <div class="panel-body">
       <textarea class="form-control" placeholder="write a comment..." rows="3"></textarea>
       <br>

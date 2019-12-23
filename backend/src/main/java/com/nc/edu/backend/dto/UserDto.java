@@ -19,7 +19,7 @@ public class UserDto {
     private int CountOfSubscribers;
     private int CountOfSubscribtions;
     private int countOfPosts;
-    private boolean isSubscribed;
+    private boolean subscribed;
     public UserDto(long id, String name, String surname, String email, String aboutMe, String login, String password, String role, String status, String photoUrl) {
         this.id = id;
         this.name = name;
@@ -140,10 +140,10 @@ public class UserDto {
     }
 
     public boolean isSubscribed() {
-        return isSubscribed;
+        return subscribed;
     }
 
     public void setSubscribed(boolean subscribed) {
-        isSubscribed = subscribed;
+        this.subscribed = subscribed;
     }
 }

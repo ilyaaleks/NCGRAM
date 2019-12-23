@@ -2,6 +2,8 @@ import {Component, Input, OnInit, TemplateRef} from '@angular/core';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {DialogwindowComponent} from '../dialogwindow/dialogwindow.component';
+import {UserService} from "../../service/user-service";
+import {UserModel} from "../../Model/userModel";
 
 @Component({
   selector: 'app-post',
@@ -15,18 +17,18 @@ export class PostComponent implements OnInit {
   description;
   @Input()
   date;
-  @Input()
-  hashTags;
+  @Input() private _hashTags;
   @Input()
   src
   @Input()
   id;
   @Input()
   authorPhotoPath;
+  @Input() private _authorId;
+  private activeUser:boolean;
 
-
-
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog,
+              private userService:UserService) {
 
   }
   getUrl() {
@@ -40,12 +42,33 @@ export class PostComponent implements OnInit {
       return "http://localhost:8083/api/photo/" + this.src;
     }
   }
+
+  get authorId() {
+    return "user/"+this._authorId;
+  }
+
   openDialog() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.width = '30%';
     this.dialog.open(DialogwindowComponent, dialogConfig);
   }
 
+  get hashTags() {
+    return this._hashTags.id;
+  }
+
   ngOnInit() {
+    this.userService.activeUser.subscribe((user:UserModel)=>{
+      if(this.authorId!=null) {
+        if(user.id === this._authorId) {
+          this.activeUser = true;
+        }
+        else
+        {
+          this.activeUser=false;
+        }
+      }
+
+    })
   }
 }

@@ -55,9 +55,22 @@ public class PostController {
 
     }
 
-    @GetMapping("/posts/userId")
+    @GetMapping("/userPosts/{userId}")
     public PostPageDto getUserPosts(@PathVariable() long userId,
                                     Pageable page) {
         return postService.getUserPosts(userId, page);
+    }
+
+    @GetMapping("/postsByTag/{tagId}")
+    public PostPageDto getPostsByTag(@PathVariable() long tagId,
+                                     Pageable page)//,@RequestParam long tagId
+    {
+        return postService.getPostsByTag(tagId, page);
+    }
+
+    @GetMapping("/subscribtionPosts/{userId}")
+    public PostPageDto getSubscribtionPosts(@PathVariable() long userId,
+                                    Pageable page) {
+        return postService.getSubscribtionPosts(userId, page);
     }
 }

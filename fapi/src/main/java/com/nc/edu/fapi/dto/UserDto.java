@@ -142,4 +142,5 @@ public class UserDto {
     public void setSubscribed(boolean subscribed) {
         isSubscribed = subscribed;
     }
+
 }

@@ -32,7 +32,7 @@ public class Converter {
     }
     public Post convertToPost(PostDto postDto)
     {
-        User user=userService.findById(postDto.getAuthorId());
+        User user=userService.findById(postDto.getAuthorId(),0);
         return new Post(user.getLogin(),postDto.getPhotoPath(),postDto.getText(),postDto.getDate(),postDto.getHashTags());
     }
     public Set<HashTagDto> convertToHashTagDto(Set<HashTag> hashTags)
