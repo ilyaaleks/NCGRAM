@@ -1,9 +1,12 @@
 package com.nc.edu.fapi.service;
 
+import com.nc.edu.fapi.dto.PostPageDto;
 import com.nc.edu.fapi.dto.UserDto;
+import com.nc.edu.fapi.dto.UserPageDto;
 import com.nc.edu.fapi.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -101,5 +104,17 @@ public class UserService {
         RestTemplate restTemplate=new RestTemplate();
         UserDto userDto=restTemplate.getForObject(backendServerUrl+"/api/user/unsubscribe?userId="+userId+"&currentUserId="+currentUser,UserDto.class);
         return userDto;
+    }
+
+    public UserPageDto getSubscribers(long userId, Pageable page) {
+        RestTemplate restTemplate = new RestTemplate();
+        UserPageDto users= restTemplate.getForObject(backendServerUrl + "/api/user/subscribers/"+userId+"?page="+page.getPageNumber()+"&size=5&sort=id,DESC", UserPageDto.class);
+        return users;
+    }
+
+    public UserPageDto getSubscriptions(long userId, Pageable page) {
+        RestTemplate restTemplate = new RestTemplate();
+        UserPageDto users= restTemplate.getForObject(backendServerUrl + "/api/user/subscriptions/"+userId+"?page="+page.getPageNumber()+"&size=5&sort=id,DESC", UserPageDto.class);
+        return users;
     }
 }

@@ -21,10 +21,10 @@
     </section>
     <p class="card-text">{{description}}</p>
     <p class="card-text"><a [href]='"http://localhost:4200/story/"+item.id' *ngFor="let item of _hashTags">{{"#"+item.text+" "}}</a></p>
-    <div class="panel-body">
-      <textarea class="form-control" placeholder="write a comment..." rows="3"></textarea>
+    <div [formGroup]="commentForm" class="panel-body">
+      <textarea formControlName="comment" class="form-control" placeholder="write a comment..." rows="3"></textarea>
       <br>
-      <button type="button" class="btn btn-info pull-right">Post</button>
+      <button type="button" *ngIf="commentForm.valid" class="btn btn-info pull-right" (click)="addComment()">Post</button>
       <div class="clearfix"></div>
       <hr>
       <app-comment></app-comment>

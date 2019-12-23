@@ -26,9 +26,12 @@ import {ScrollingModule} from "@angular/cdk/scrolling";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {InterceptorService} from "./service/interceptor.service";
 import {JwtInterceptor} from "./service/jwt-interceptor";
+import { SubscribtionWindowComponent } from './Components/subscribtion-window/subscribtion-window.component';
+import { SubscribersWindowComponent } from './Components/subscribers-window/subscribers-window.component';
 
 @NgModule({
-  entryComponents: [DialogwindowComponent, NotificationsComponent],
+  entryComponents: [DialogwindowComponent, NotificationsComponent,SubscribtionWindowComponent,
+    SubscribersWindowComponent],
   declarations: [
     AppComponent,
     PostComponent,
@@ -44,6 +47,8 @@ import {JwtInterceptor} from "./service/jwt-interceptor";
     AboutUserComponent,
     DialogwindowComponent,
     NotificationsComponent,
+    SubscribtionWindowComponent,
+    SubscribersWindowComponent,
   ],
   imports: [
     BrowserModule, FormsModule, RoutingmoduleModule, ReactiveFormsModule,

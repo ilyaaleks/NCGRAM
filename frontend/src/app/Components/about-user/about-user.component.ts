@@ -3,12 +3,14 @@ import {UserService} from "../../service/user-service";
 import {ActivatedRoute, ParamMap} from "@angular/router";
 import {UserModel} from "../../Model/userModel";
 import {ReplaySubject, Subject, Subscription} from "rxjs";
-import {map} from "rxjs/operators";
-import {__param} from "tslib";
 import {HttpClient} from "@angular/common/http";
 import {PostPageDto} from "../../Model/PostPageDto";
 import {PostService} from "../../service/post.service";
 import {PostModel} from "../../Model/postModel";
+import {MatDialog, MatDialogConfig} from "@angular/material";
+import {NotificationsComponent} from "../notifications/notifications.component";
+import { SubscribtionWindowComponent} from "../subscribtion-window/subscribtion-window.component";
+import { SubscribersWindowComponent} from "../subscribers-window/subscribers-window.component";
 
 @Component({
   selector: 'app-about-user',
@@ -36,7 +38,8 @@ export class AboutUserComponent implements OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private userService: UserService,
     private httpClient: HttpClient,
-    private postService: PostService
+    private postService: PostService,
+    public dialog: MatDialog,
   ) {
 
 
@@ -58,6 +61,7 @@ export class AboutUserComponent implements OnInit, OnDestroy {
     this.activatedRoute.paramMap.subscribe((params) => {
       this.userService.subscribe(Number.parseInt(params.get("id")))
       this._user.subscribed = !this._user.subscribed;
+      this.countOfSubscriptions++;
     })
 
   }
@@ -66,6 +70,7 @@ export class AboutUserComponent implements OnInit, OnDestroy {
     this.activatedRoute.paramMap.subscribe((params) => {
       this.userService.unsubscribe(Number.parseInt(params.get("id")))
       this._user.subscribed = !this._user.subscribed;
+      this.countOfSubscriptions--;
     })
   }
 
@@ -115,8 +120,9 @@ export class AboutUserComponent implements OnInit, OnDestroy {
       if(post!=null)
       {
         if(this.posts.length===5 && this.page===1 && !this.pageOfCurrentUser) {
-          this.posts.splice(4, 1);
           this.posts.unshift(post);
+          this.posts.splice(4, 1);
+
           this.postService.newPost.next(null);
           this.countOfPosts++;
 
@@ -136,6 +142,19 @@ export class AboutUserComponent implements OnInit, OnDestroy {
 
   }
 
+  openSubscribersModal()
+  {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.width = '50%';
+    dialogConfig.data={idUser:this._user.id};
+    this.dialog.open(SubscribersWindowComponent, dialogConfig);
+  }
+  openSubscriptionsModal(){
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.width = '50%';
+    dialogConfig.data={idUser:this._user.id};
+    this.dialog.open(SubscribtionWindowComponent, dialogConfig);
+  }
   getUrl() {
     if (this._user != null) {
       return "http://localhost:8083/api/photo/" + this._user.photoUrl;

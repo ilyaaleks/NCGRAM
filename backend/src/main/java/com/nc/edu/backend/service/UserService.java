@@ -29,9 +29,8 @@ public interface UserService {
 
     UserDto subscribe(int userId, int currentUserId) throws UserPrincipalNotFoundException;
 
-    List<UserDto> getSubscribers(long userId) throws UserPrincipalNotFoundException;
-
-    List<UserDto> getSubscriptions(long userId) throws UserPrincipalNotFoundException;
 
     UserPageDto getSubscriptions(long userId, Pageable pageable) throws UserPrincipalNotFoundException;
+
+    UserPageDto getSubscribers(long userId, Pageable pageable) throws UserPrincipalNotFoundException;
 }

@@ -132,18 +132,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserDto> getSubscribers(long userId) throws UserPrincipalNotFoundException {
-        User user=userRepository.findById(userId);
-        List<UserDto> subscribers=new ArrayList<>();
-        Converter converter=new Converter();
-        for(User subscriber:user.getSubscribers())
-        {
-            subscribers.add(converter.convertToUserDto(subscriber));
-        }
-        return subscribers;
-    }
-
-    @Override
     public UserPageDto getSubscriptions(long userId, Pageable pageable) throws UserPrincipalNotFoundException {
         Page<User> page = userRepository.findSubscriptions(userId,pageable);
         List<User> userList = page.getContent();
@@ -152,10 +140,24 @@ public class UserServiceImpl implements UserService {
         UserDto userDto;
         for (User user : userList) {
             userDto=converter.convertToUserDto(user);
-            postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
-            postDtoList.add(converter.converToPostDto(post));
+            userDtos.add(userDto);
         }
-        return new PostPageDto(postDtoList,
+        return new UserPageDto(userDtos,
+                pageable.getPageNumber(),
+                page.getTotalPages());
+    }
+    @Override
+    public UserPageDto getSubscribers(long userId, Pageable pageable) throws UserPrincipalNotFoundException {
+        Page<User> page = userRepository.findSubscribers(userId,pageable);
+        List<User> userList = page.getContent();
+        List<UserDto> userDtos = new ArrayList<>();
+        Converter converter = new Converter();
+        UserDto userDto;
+        for (User user : userList) {
+            userDto=converter.convertToUserDto(user);
+            userDtos.add(userDto);
+        }
+        return new UserPageDto(userDtos,
                 pageable.getPageNumber(),
                 page.getTotalPages());
     }

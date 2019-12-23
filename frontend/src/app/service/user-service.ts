@@ -7,6 +7,8 @@ import {HttpClient} from "@angular/common/http";
 import {post} from "selenium-webdriver/http";
 import {JwtHelper} from "angular2-jwt";
 import {JwtHelperService} from "@auth0/angular-jwt";
+import {PostPageDto} from "../Model/PostPageDto";
+import {UserPageDto} from "../Model/user-page-dto";
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +18,7 @@ export class UserService{
   private usersStorage: UserModel[];
   private users: Subject<UserModel[]> = new ReplaySubject(1);
   private user: Subject<UserModel> = new ReplaySubject(1);
+  private userPages:Subject<UserPageDto>=new ReplaySubject(1);
   private _activeUser: Subject<UserModel> = new ReplaySubject(1);
   private countOfSubscribers:Subject<number>=new ReplaySubject(1);
   private countOfSubscriptions: Subject<number>=new ReplaySubject(1);
@@ -154,4 +157,20 @@ export class UserService{
     return this.isAdmin;
   }
 
+  public getUserSubscribers(page: number,userId:number):Observable<UserPageDto>{
+    this.httpClient.get('/api/subscribers/'+userId+'?page=' + page + '&size=5&sort=id,DESC').subscribe((userPages: UserPageDto) => {//посмотреть и потом поменять
+      this.users.next(userPages.users);
+      this.userPages.next(userPages);
+    });
+
+    return this.userPages.asObservable();
+  }
+  public getUserSubscriptions(page: number,userId:number):Observable<UserPageDto>{
+    this.httpClient.get('/api/subscriptions/'+userId+'?page=' + page + '&size=5&sort=id,DESC').subscribe((userPages: UserPageDto) => {//посмотреть и потом поменять
+      this.users.next(userPages.users);
+      this.userPages.next(userPages);
+    });
+
+    return this.userPages.asObservable();
+  }
 }

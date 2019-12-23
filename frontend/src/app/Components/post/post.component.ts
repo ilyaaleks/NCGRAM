@@ -4,6 +4,9 @@ import {MatDialog, MatDialogConfig} from '@angular/material';
 import {DialogwindowComponent} from '../dialogwindow/dialogwindow.component';
 import {UserService} from "../../service/user-service";
 import {UserModel} from "../../Model/userModel";
+import {CommentService} from "../../service/comment.service";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {CommentModel} from "../../Model/comment-model";
 
 @Component({
   selector: 'app-post',
@@ -26,9 +29,10 @@ export class PostComponent implements OnInit {
   authorPhotoPath;
   @Input() private _authorId;
   private activeUser:boolean;
-
+  public commentForm: FormGroup;
   constructor(public dialog: MatDialog,
-              private userService:UserService) {
+              private userService:UserService,
+              private commentSerivce:CommentService) {
 
   }
   getUrl() {
@@ -58,6 +62,10 @@ export class PostComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.commentForm = new FormGroup({
+      comment: new FormControl('',[Validators.required])
+    })
+    ;
     this.userService.activeUser.subscribe((user:UserModel)=>{
       if(this.authorId!=null) {
         if(user.id === this._authorId) {
@@ -70,5 +78,21 @@ export class PostComponent implements OnInit {
       }
 
     })
+  }
+
+  addComment() {
+    this.userService.activeUser.subscribe((user:UserModel)=>{
+      let comment:CommentModel={
+        id:null,
+        text:this.commentForm.controls['comment'].value,
+        date:null,
+        postId:this.id,
+        userId:user.id,
+      }
+      this.commentSerivce.saveComment(comment).subscribe((comment:CommentModel)=>{
+
+      });
+    })
+
   }
 }

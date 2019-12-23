@@ -5,12 +5,14 @@ import com.nc.edu.backend.domain.LikeOrDislike;
 import com.nc.edu.backend.domain.Post;
 import com.nc.edu.backend.domain.User;
 import com.nc.edu.backend.dto.UserDto;
+import com.nc.edu.backend.dto.UserPageDto;
 import com.nc.edu.backend.service.UserService;
 import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
@@ -98,13 +100,15 @@ public class UserController {
     }
 
     @GetMapping("/subscribers/{userId}")
-    public List<UserDto> getSubscribers(@PathVariable() long userId) throws UserPrincipalNotFoundException {
-        return userService.getSubscribers(userId);
+    public UserPageDto getSubscribers(@PathVariable() long userId,
+                                      Pageable page) throws UserPrincipalNotFoundException {
+        return userService.getSubscribers(userId,page);
     }
 
     @GetMapping("/subscriptions/{userId}")
-    public List<UserDto> getSubscriptions(@PathVariable() long userId) throws UserPrincipalNotFoundException {
-        return userService.getSubscriptions(userId);
+    public UserPageDto getSubscriptions(@PathVariable() long userId,
+                                          Pageable page) throws UserPrincipalNotFoundException {
+        return userService.getSubscriptions(userId,page);
     }
 
 

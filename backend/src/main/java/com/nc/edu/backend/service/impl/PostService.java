@@ -43,7 +43,7 @@ public class PostService {
         for (Post post : postList) {
             postDto=converter.converToPostDto(post);
             postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
-            postDtoList.add(converter.converToPostDto(post));
+            postDtoList.add(postDto);
         }
         return new PostPageDto(postDtoList,
                 pageable.getPageNumber(),
@@ -132,7 +132,7 @@ public class PostService {
         for (Post post : postList) {
             postDto=converter.converToPostDto(post);
             postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
-            postDtoList.add(converter.converToPostDto(post));
+            postDtoList.add(postDto);
         }
         return new PostPageDto(postDtoList,
                 pageable.getPageNumber(),
@@ -148,7 +148,7 @@ public class PostService {
         for (Post post : postList) {
             postDto=converter.converToPostDto(post);
             postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
-            postDtoList.add(converter.converToPostDto(post));
+            postDtoList.add(postDto);
         }
         return new PostPageDto(postDtoList,
                 pageable.getPageNumber(),
@@ -164,7 +164,7 @@ public class PostService {
         for (Post post : postList) {
             postDto=converter.converToPostDto(post);
             postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
-            postDtoList.add(converter.converToPostDto(post));
+            postDtoList.add(postDto);
         }
         return new PostPageDto(postDtoList,
                 pageable.getPageNumber(),

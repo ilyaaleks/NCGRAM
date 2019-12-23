@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Subscribers</h2>
+<div class="bd-highlight mb-3" style="overflow:hidden auto; height: auto">
+  <div>
+    <ul *ngFor="let item of users" class="list-group">
+      <li class="list-group-item"><span class="image_span float-left" [ngStyle]="{'background-image': getUrl(item.photoUrl)}"></span><a style="font-size: 16px" class="ml-5 " href="{{'user/'+item.id}}">{{item.login}}</a></li>
+    </ul>
+  </div>
+  <ngb-pagination [collectionSize]="totalItems" [pageSize]="itemsPerPage" [(page)]="page" [maxSize]="7" [rotate]="true"
+                  (pageChange)="loadPage($event)"></ngb-pagination>
+</div>
