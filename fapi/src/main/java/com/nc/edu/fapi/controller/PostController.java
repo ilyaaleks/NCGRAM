@@ -1,6 +1,7 @@
 package com.nc.edu.fapi.controller;
 
 
+import com.nc.edu.fapi.dto.ClaimDto;
 import com.nc.edu.fapi.dto.PostDto;
 import com.nc.edu.fapi.dto.PostPageDto;
 import com.nc.edu.fapi.dto.UserDto;
@@ -72,5 +73,23 @@ public class PostController {
     public PostPageDto getSubscribtionPosts(@PathVariable() long userId,
                                     Pageable page) {
         return postService.getSubscribtionPosts(userId, page);
+    }
+    @DeleteMapping("/post/{postId}")
+    public void getSubscribtionPosts(@PathVariable() long postId) {
+       postService.deletePost(postId);
+    }
+    @PutMapping("/posts")
+    public PostDto updatePost(@RequestParam(name = "file") MultipartFile file,//можно ли возвращать object?
+                            @RequestParam String authorLogin,
+                            @RequestParam String hashTags,
+                            @RequestParam String text,
+                              @RequestParam long postId) throws IOException {
+        PostDto savePost = postService.updatePost(new Post(postId,authorLogin, null, text, new Date(), null), file, hashTags);
+        return savePost;
+    }
+    @PostMapping("/posts/claim")
+    public ClaimDto saveClaim(@RequestBody ClaimDto claimDto) throws IOException {
+        ClaimDto savePost = postService.saveClaim(claimDto);
+        return savePost;
     }
 }

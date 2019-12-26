@@ -2,8 +2,9 @@
   <div class="card-header border-success">
     <span class="image_span float-left" [ngStyle]="{'background-image': getUrl()}"></span>
     <h6 class="ml-3 mt-3 card-title float-left"><a [href]="authorId">{{author}}</a></h6>
-    <i *ngIf="activeUser" class="far fa-trash-alt float-right "></i>
-    <i class="fas fa-ellipsis-h float-right mr-2" (click)="openDialog()" ></i>
+    <i *ngIf="activeUser" (click)="deletePost()" class="far fa-trash-alt float-right "></i>
+    <i *ngIf="activeUser" (click)="updatePost()" class="far fa-edit float-right mr-2"></i>
+    <i *ngIf="!activeUser" (click)="sendReport()" class="fas fa-flag float-right mr-2"></i>
   </div>
   <div class="card-body">
     <img class="card-img-top " [src]="getPostUrl()"/>
@@ -11,23 +12,31 @@
   <div class="card-footer">
     <section>
       <span>
-        <button *ngIf="!activeUser" class="mark_button">
+        <button *ngIf="!activeUser" [disabled]="typeOfVoteUser===Like" class="mark_button" (click)="setLike()">
           <i class="far fa-thumbs-up large_icon"></i>
         </button>
+        <span class="text-muted h4">{{countOfLikes}}</span>
       </span>
       <span>
-        <button class="mark_button" *ngIf="!activeUser"><i class="far fa-thumbs-down large_icon"></i></button>
+        <button (click)="setDislike()" [disabled]="typeOfVoteUser===Dislike" class="mark_button" *ngIf="!activeUser"><i class="far fa-thumbs-down large_icon"></i></button>
+        <span class="text-muted h4">{{countOfDislike}}</span>
       </span>
     </section>
-    <p class="card-text">{{description}}</p>
+    <p class="card-text h4">{{description}}</p>
     <p class="card-text"><a [href]='"http://localhost:4200/story/"+item.id' *ngFor="let item of _hashTags">{{"#"+item.text+" "}}</a></p>
     <div [formGroup]="commentForm" class="panel-body">
+      <div class="panel-heading">
+        Comment panel
+      </div>
       <textarea formControlName="comment" class="form-control" placeholder="write a comment..." rows="3"></textarea>
       <br>
       <button type="button" *ngIf="commentForm.valid" class="btn btn-info pull-right" (click)="addComment()">Post</button>
       <div class="clearfix"></div>
       <hr>
-      <app-comment></app-comment>
+      <app-comment *ngFor="let comment of comments" [comment]="comment"></app-comment>
     </div>
   </div>
+  <ngb-pagination [collectionSize]="totalItems" [pageSize]="itemsPerPage" [(page)]="page" [maxSize]="7" [rotate]="true"
+                  (pageChange)="loadPage($event)"></ngb-pagination>
+
 </div>

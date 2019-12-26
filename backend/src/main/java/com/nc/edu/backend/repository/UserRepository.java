@@ -14,9 +14,9 @@ public interface UserRepository extends CrudRepository<User, Long> {
     User findByLogin(String login);
 
     User findById(long id);
+    @Query(value = "SELECT * FROM user u JOIN user_subscriptions us ON u.id = us.channel_id JOIN user u1 \n" +
+            "  ON us.subscriber_id=u1.id WHERE us.subscriber_id=?1", nativeQuery = true)
 
-    @Query(value = "SELECT * FROM user u JOIN user_subscriptions us ON u.id = us.subscriber_id JOIN user u1 \n" +
-            "  ON us.channel_id=u1.id WHERE us.channel_id=?1", nativeQuery = true)
     Page<User> findSubscriptions(long userId, Pageable page);
 
     @Query(value = "SELECT * FROM user u JOIN user_subscriptions us ON u.id = us.subscriber_id JOIN user u1 \n" +

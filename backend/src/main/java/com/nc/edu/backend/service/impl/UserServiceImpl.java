@@ -96,14 +96,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto getCountOfSubscribers(long userId) {
         UserDto userDto = new UserDto();
-        userDto.setCountOfSubscribers(userRepository.findById(userId).getSubscribers().size());
+        userDto.setCountOfSubscribers(userRepository.findById(userId).getSubscriptions().size());
         return userDto;
     }
 
     @Override
     public UserDto getCountOfSubscribtions(long userId) {
         UserDto userDto = new UserDto();
-        userDto.setCountOfSubscribtions(userRepository.findById(userId).getSubscriptions().size());
+        userDto.setCountOfSubscribtions(userRepository.findById(userId).getSubscribers().size());
         return userDto;
     }
 

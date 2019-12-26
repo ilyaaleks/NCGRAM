@@ -48,6 +48,7 @@ export class AuthService {
     localStorage.removeItem('token');
     this.userService.activeUser.next(null);
     this.router.navigate(['/home']);
+    this.http.post('api/logout',null).subscribe();
   }
   public isAuthenticated(): boolean {
     const token = this.getToken();

@@ -139,7 +139,19 @@ export class AboutUserComponent implements OnInit, OnDestroy {
         }
       }
     })
-
+    this.postService.deletedPostId.subscribe((id:number)=>{
+      if(id!==null && id!==0)
+      {
+        this.posts.splice(this.posts.findIndex(item => item.id === id), 1)
+      }
+    })
+    this.postService.updatedPost.subscribe((post:PostModel)=>{
+      if(post!==null){
+        this.posts.unshift(post);
+        this.posts.splice(this.posts.findIndex(item => item.id === post.id), 1);
+        this.postService.updatedPost.next(null);
+      }
+    })
   }
 
   openSubscribersModal()

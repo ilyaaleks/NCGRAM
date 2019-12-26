@@ -29,7 +29,13 @@ public class LikeOrDislike {
         this.typeOfVote = typeOfVote;
         this.date = date;
     }
-
+    public LikeOrDislike(long id,Post post, User author, TypeOfVote typeOfVote, Date date) {
+        this.id=id;
+        this.post = post;
+        this.author = author;
+        this.typeOfVote = typeOfVote;
+        this.date = date;
+    }
     public long getId() {
         return id;
     }

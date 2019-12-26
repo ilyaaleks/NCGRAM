@@ -16,7 +16,8 @@
     </div>
     <input type="file" name="file" formControlName="file" (change)="onFileChange($event.target.files)">
     <div class=" p-1">
-      <button *ngIf="postForm.valid" class="btn btn-info btn-block"  mat-button [mat-dialog-close]="true" (click)="addPost()">Add post</button>
+      <button *ngIf="postForm.valid && data===null" class="btn btn-info btn-block"  mat-button [mat-dialog-close]="true" (click)="addPost()">Add post</button>
+      <button *ngIf="postForm.valid && data!==null" class="btn btn-info btn-block"  mat-button [mat-dialog-close]="true" (click)="update()">Update</button>
       <button *ngIf="!postForm.valid" disabled="disabled" class="btn btn-dark btn-block">Add post</button>
     </div>
   </form>

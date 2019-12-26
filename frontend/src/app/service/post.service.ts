@@ -6,6 +6,7 @@ import {PostPageDto} from "../Model/PostPageDto";
 import {map} from "rxjs/operators";
 import {UserService} from "./user-service";
 import {UserModel} from "../Model/userModel";
+import {ClaimModel} from "../Model/claim-model";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,8 @@ export class PostService {
   private posts: Subject<PostModel[]> = new ReplaySubject(1);
   private postPages: Subject<PostPageDto> = new ReplaySubject(1);
   private post: Subject<PostModel> = new ReplaySubject(1);
-
+  public deletedPostId:Subject<number>=new ReplaySubject(1);
+  public updatedPost:Subject<PostModel>=new ReplaySubject(1);
   constructor(private httpClient: HttpClient) {
   }
 
@@ -87,16 +89,30 @@ export class PostService {
     // '/api/posts'
   }
 
-  public updatePost(post: PostModel): Observable<PostModel> {
-    if (!this.post) {
-      return this.httpClient.put<PostModel>("api/post", post);
+  public updatePost(file: File,post: PostModel): void {
+    if (post!=null) {
+      const formData: FormData = new FormData();
+      let hashTags:string;
+      formData.append('file', file);
+      formData.append('authorLogin', post.authorLogin);
+      formData.append('hashTags', post.hashTags);
+      formData.append('text', post.text);
+      formData.append('postId',post.id.toString());
+      this.httpClient.put<PostModel>("api/posts", formData).subscribe((post:PostModel)=>{
+        this.updatedPost.next(post);
+      });
     }
   }
 
-  public deletePost(post: PostModel): Observable<void> {
-    if (!this.post) {
-      return this.httpClient.delete<void>("api/post/" + post.id);
+  public deletePost(postId: number): Observable<void> {
+    if (postId!==null && postId!==0) {
+      this.deletedPostId.next(postId);
+      return this.httpClient.delete<void>("api/post/" + postId);
     }
+  }
+  public sendClaim(claim:ClaimModel): Observable<ClaimModel>
+  {
+    return this.httpClient.post<ClaimModel>('/api/posts/claim', claim);
   }
   //public setLike()
 

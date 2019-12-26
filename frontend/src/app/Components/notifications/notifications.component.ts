@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ValidatorFn, Validators} from "@angular/forms";
 import {UserModel} from "../../Model/userModel";
 import {UserService} from "../../service/user-service";
 import {Router} from "@angular/router";
 import {PostModel} from "../../Model/postModel";
 import {PostService} from "../../service/post.service";
-import {MatDialogRef} from "@angular/material";
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-notifications',
@@ -18,7 +19,8 @@ export class NotificationsComponent implements OnInit {
   constructor(private userService:UserService,
               private postService:PostService,
               private router: Router,
-              public dialogRef: MatDialogRef<NotificationsComponent>
+              public dialogRef: MatDialogRef<NotificationsComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any
               ) { }
 
   ngOnInit() {
@@ -28,6 +30,12 @@ export class NotificationsComponent implements OnInit {
       file: new FormControl(null, [Validators.required])
     })
     ;
+    if(this.data!==null)
+    {
+      let post:PostModel=this.data.post;
+      this.postForm.controls['text'].setValue(post.text);
+      this.postForm.controls['tags'].setValue(post.hashTags);
+    }
   }
 
   fileToUpload: File = null;
@@ -54,5 +62,16 @@ export class NotificationsComponent implements OnInit {
       })
     })
 
+  }
+  public update(){
+    let post: PostModel = {
+      id: this.data.post.id,
+      authorLogin: this.data.post.authorLogin,
+      photoPath: null,
+      text: this.postForm.controls['text'].value,
+      date: new Date().toString(),
+      hashTags: this.postForm.controls['tags'].value
+    }
+    this.postService.updatePost(this.fileToUpload,post);
   }
 }

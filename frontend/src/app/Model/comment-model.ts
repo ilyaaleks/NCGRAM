@@ -3,6 +3,7 @@ export interface CommentModel {
   text:string,
   date:any,
   postId?:number,
-  userId?:any
-
+  userId?:any,
+  userLogin?:any,
+  authorPhotoPath?:string
 }

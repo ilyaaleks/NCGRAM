@@ -24,14 +24,14 @@ export class ActivityComponent implements OnInit {
       if (page !== this.previousPage) {
         this.previousPage = page;
         if (params.get("tag") !== null) {
-          this.postService.getPostsByTag(params.get("tag"),page-1 ).subscribe((postPages: PostPageDto) => {
+          this.postService.getPostsByTag(params.get("tag"), page - 1).subscribe((postPages: PostPageDto) => {
             this.totalItems = postPages.totalPage * this.itemsPerPage;
             this.page = 1;
             this.posts = postPages.posts;
           })
         } else {
-          this.userService.activeUser.subscribe((user:UserModel)=>{
-            this.postService.getSubscriptionsPosts(page-1,user.id).subscribe(
+          this.userService.activeUser.subscribe((user: UserModel) => {
+            this.postService.getSubscriptionsPosts(page - 1, user.id).subscribe(
               (posts: PostPageDto) => {
                 this.posts = posts.posts;
                 this.totalItems = posts.totalPage * this.itemsPerPage;
@@ -47,7 +47,7 @@ export class ActivityComponent implements OnInit {
 
   constructor(private postService: PostService,
               private activatedRoute: ActivatedRoute,
-              private userService:UserService) {
+              private userService: UserService) {
   }
 
   ngOnInit() {
@@ -59,8 +59,8 @@ export class ActivityComponent implements OnInit {
           this.posts = postPages.posts;
         })
       } else {
-        this.userService.activeUser.subscribe((user:UserModel)=>{
-          this.postService.getSubscriptionsPosts(0,user.id).subscribe((posts: PostPageDto) => {
+        this.userService.activeUser.subscribe((user: UserModel) => {
+          this.postService.getSubscriptionsPosts(0, user.id).subscribe((posts: PostPageDto) => {
             this.totalItems = posts.totalPage * this.itemsPerPage;
             this.page = 1;
             this.posts = posts.posts;
@@ -70,6 +70,7 @@ export class ActivityComponent implements OnInit {
 
       }
     })
+
   }
 
 }

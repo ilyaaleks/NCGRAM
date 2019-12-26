@@ -41,7 +41,7 @@ public class PostService {
         Converter converter = new Converter();
         PostDto postDto;
         for (Post post : postList) {
-            postDto=converter.converToPostDto(post);
+            postDto = converter.converToPostDto(post);
             postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
             postDtoList.add(postDto);
         }
@@ -74,20 +74,18 @@ public class PostService {
                 e.printStackTrace();
             }
             post.setPhotoPath(resultFilename);
-            post =postRepository.save(post);
+            post = postRepository.save(post);
 
             if (hashTags != null && !hashTags.equals("")) {
                 String[] tags = hashTags.split("#");
                 for (String tag : tags) {
                     if (tag != null && !tag.equals("") && !tag.equals(" ")) {
-                        HashTag hashTag=tagRepository.findByText(tag);
-                        if(hashTag==null) {
-                            HashTag ht=new HashTag(tag);
+                        HashTag hashTag = tagRepository.findByText(tag);
+                        if (hashTag == null) {
+                            HashTag ht = new HashTag(tag);
                             ht.getPosts().add(post);
                             tagList.add(ht);
-                        }
-                        else
-                        {
+                        } else {
                             hashTag.getPosts().add(post);
                             tagList.add(hashTag);
                         }
@@ -97,8 +95,64 @@ public class PostService {
 
         }
         Iterable<HashTag> hashTagsObj = tagRepository.saveAll(tagList);
-        Converter converter=new Converter();
-        post.setHashTags(new HashSet<HashTag>((Collection)hashTagsObj) );
+        Converter converter = new Converter();
+        post.setHashTags(new HashSet<HashTag>((Collection) hashTagsObj));
+        return converter.converToPostDto(post);
+    }
+
+    public PostDto update(Post post, String fileStr, String fileName, String hashTags) {
+        String decoded = new String(Base64.getDecoder().decode(fileStr));
+        Set<HashTag> tagList = new HashSet<>();
+        byte[] file = Base64.getDecoder().decode(fileStr);
+        if (file != null) {
+            File uploadDir = new File(uploadPath);
+            if (!uploadDir.exists()) {
+                uploadDir.mkdir();
+            }
+            String uuidFile = UUID.randomUUID().toString();
+            String resultFilename = uuidFile + "." + fileName;
+            try (FileOutputStream fos = new FileOutputStream(uploadPath + "/" + resultFilename)) {
+                fos.write(file);
+                fos.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Post savingPost=postRepository.findById(post.getId());
+            Set<HashTag> hashTagsOfPost=savingPost.getHashTags();
+            final long id=savingPost.getId();
+            hashTagsOfPost.forEach((HashTag item)->{
+                item.getPosts().removeIf((obj)->obj.getId()==id);
+            });
+            tagRepository.saveAll(hashTagsOfPost);
+            savingPost.setPhotoPath(resultFilename);
+            savingPost.getHashTags().clear();
+            savingPost.setText(post.getText());
+            savingPost  = postRepository.save(savingPost);
+
+            if (hashTags != null && !hashTags.equals("")) {
+                String[] tags = hashTags.split("#");
+                for (String tag : tags) {
+                    if (tag != null && !tag.equals("") && !tag.equals(" ")) {
+                        tag.trim();
+                        HashTag hashTag = tagRepository.findByText(tag);
+                        if (hashTag == null) {
+                            HashTag ht = new HashTag(tag);
+                            ht.getPosts().add(savingPost);
+                            tagList.add(ht);
+                        } else {
+                            hashTag.getPosts().add(savingPost);
+                            tagList.add(hashTag);
+                        }
+                    }
+                }
+            }
+
+        }
+        Iterable<HashTag> hashTagsObj = tagRepository.saveAll(tagList);
+        Converter converter = new Converter();
+        post.setHashTags(new HashSet<HashTag>((Collection) hashTagsObj));
         return converter.converToPostDto(post);
     }
 
@@ -123,14 +177,14 @@ public class PostService {
         return postRepository.count();
     }
 
-    public PostPageDto getPostOfAuthor(long userId,Pageable pageable) {
-        Page<Post> page = postRepository.findByAuthor(userId,pageable);
+    public PostPageDto getPostOfAuthor(long userId, Pageable pageable) {
+        Page<Post> page = postRepository.findByAuthor(userId, pageable);
         List<Post> postList = page.getContent();
         List<PostDto> postDtoList = new ArrayList<>();
         Converter converter = new Converter();
         PostDto postDto;
         for (Post post : postList) {
-            postDto=converter.converToPostDto(post);
+            postDto = converter.converToPostDto(post);
             postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
             postDtoList.add(postDto);
         }
@@ -140,13 +194,13 @@ public class PostService {
     }
 
     public PostPageDto getPostsByTag(long tagId, Pageable pageable) {
-        Page<Post> page = postRepository.findByTag(tagId,pageable);
+        Page<Post> page = postRepository.findByTag(tagId, pageable);
         List<Post> postList = page.getContent();
         List<PostDto> postDtoList = new ArrayList<>();
         Converter converter = new Converter();
         PostDto postDto;
         for (Post post : postList) {
-            postDto=converter.converToPostDto(post);
+            postDto = converter.converToPostDto(post);
             postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
             postDtoList.add(postDto);
         }
@@ -156,13 +210,13 @@ public class PostService {
     }
 
     public PostPageDto getSubscribtionPosts(long userId, Pageable pageable) {
-        Page<Post> page = postRepository.findBySubscription(userId,pageable);
+        Page<Post> page = postRepository.findBySubscription(userId, pageable);
         List<Post> postList = page.getContent();
         List<PostDto> postDtoList = new ArrayList<>();
         Converter converter = new Converter();
         PostDto postDto;
         for (Post post : postList) {
-            postDto=converter.converToPostDto(post);
+            postDto = converter.converToPostDto(post);
             postDto.setAuthorPhotoPath(post.getAuthor().getPhotoUrl());
             postDtoList.add(postDto);
         }
@@ -170,4 +224,6 @@ public class PostService {
                 pageable.getPageNumber(),
                 page.getTotalPages());
     }
+
+
 }

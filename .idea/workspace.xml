@@ -1,32 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1c67afe2-394c-43d0-8a4a-baff87901ee4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/LikeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/ClaimDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/CommentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/CommentPageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/LikeOrDislikeDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/ClaimRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/LikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/LikeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/LikeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/ClaimDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/CommentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/CommentPageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/LikeOrDislikeDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/LikeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/converter/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/converter/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/LikeOrDislike.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/LikeOrDislike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/converter/Converter.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/converter/Converter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/domain/LikeOrDislike.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/domain/LikeOrDislike.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/domain/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/domain/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/repository/CommentRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/CommentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/PostService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/converter/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/converter/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/models/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/SecurityJwtConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/SecurityJwtConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/controller/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/controller/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/models/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/models/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/service/PostService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/user-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/user-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/Model/comment-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Model/comment-model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/Model/comment-page-dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Model/comment-page-dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/comment.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/post.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/post.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/backend/target/" />
@@ -37,84 +78,129 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4828113">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/post/post.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="389">
-                  <caret line="24" column="40" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="85" lean-forward="true" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepository.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="7" selection-start-line="7" selection-end-line="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/post/post.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="440">
-                  <caret line="92" selection-start-line="92" selection-end-line="92" />
-                  <folding>
-                    <element signature="e#0#68#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/src/app/service/comment.service.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="33" column="71" lean-forward="true" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
-                  <folding>
-                    <element signature="e#0#43#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1615">
+              <caret line="118" selection-start-line="118" selection-end-line="118" />
+              <folding>
+                <element signature="e#1021#1037#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/SecurityJwtConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/PostService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="110" column="78" selection-start-line="110" selection-start-column="73" selection-end-line="110" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="471">
+              <caret line="90" column="60" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="60" />
+              <folding>
+                <element signature="e#2640#2641#0" expanded="true" />
+                <element signature="e#2685#2686#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/service/post.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="471">
+              <caret line="114" column="61" lean-forward="true" selection-start-line="114" selection-start-column="45" selection-end-line="114" selection-end-column="61" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/ClaimDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="15" column="99" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
+              <folding>
+                <element signature="e#253#254#0" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#312#313#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#400#401#0" expanded="true" />
+                <element signature="e#442#443#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+                <element signature="e#507#508#0" expanded="true" />
+                <element signature="e#534#535#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#604#605#0" expanded="true" />
+                <element signature="e#637#638#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
+                <element signature="e#779#780#0" expanded="true" />
+                <element signature="e#808#809#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#888#889#0" expanded="true" />
+                <element signature="e#921#922#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#998#999#0" expanded="true" />
+                <element signature="e#1038#1039#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -133,57 +219,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/story-menu/story-menu.component.ts" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/PostPageDto.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.html" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/converter/Converter.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Model/postModel.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/routingmodule/routingmodule.module.ts" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/PostService.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.ts" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/converter/Converter.java" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/UserDto.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Model/userModel.ts" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/UserDto.java" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/models/User.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/PostRepository.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/service/post.service.ts" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/UserPageDto.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/UserPageDto.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/UserService.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/UserService.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/subscribers-subscriptions/subscribers-subscriptions.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Model/user-page-dto.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/service/user-service.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/subscribers-window/subscribers-window.component.css" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/subscribers-window/subscribers-window.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/subscribtion-window/subscribtion-window.component.html" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/subscribers-window/subscribers-window.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/subscribtion-window/subscribtion-window.component.ts" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepository.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Model/comment-page-dto.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.ts" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/JwtAuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/AuthenticationController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/Model/comment-model.ts" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/converter/Converter.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/CommentDto.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/CommentDto.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/CommentService.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/main/main.component.html" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepository.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/CommentPageDto.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/CommentService.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/CommentPageDto.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Model/comment-page-dto.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Model/type-of-vote.enum.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/service/comment.service.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Model/LikeOrDislike.ts" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/LikeOrDislikeDto.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/LikeOrDislikeDto.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/service/like-dislike.service.ts" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/LikeController.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/LikeService.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/LikeController.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/LikeRepository.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/LikeOrDislike.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/converter/Converter.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/LikeService.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.ts" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/models/Post.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.ts" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/Post.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Model/claim-model.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/service/post.service.ts" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/ClaimDto.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/ClaimDto.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.ts" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/PostService.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/ClaimRepository.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/SecurityJwtConstants.java" />
       </list>
     </option>
   </component>
@@ -230,7 +316,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,16 +366,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fakegram" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -302,16 +377,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="converter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fakegram" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
@@ -357,14 +422,6 @@
             <path>
               <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
               <item name="fakegram" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fakegram" type="462c0819:PsiDirectoryNode" />
               <item name="fapi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -425,6 +482,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="fapi" type="462c0819:PsiDirectoryNode" />
+              <item name="converter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fakegram" type="462c0819:PsiDirectoryNode" />
+              <item name="fapi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="fapi" type="462c0819:PsiDirectoryNode" />
               <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -456,14 +523,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="fapi" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fakegram" type="462c0819:PsiDirectoryNode" />
-              <item name="fapi" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
@@ -525,6 +584,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="dialogwindow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fakegram" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fakegram" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="navigation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -552,7 +629,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="subscribers-window" type="462c0819:PsiDirectoryNode" />
+              <item name="publication" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
@@ -561,7 +638,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="subscribtion-window" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
@@ -592,6 +669,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -601,7 +679,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577123934973" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577357405180" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="D:/sweater" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -619,16 +697,16 @@
       <recent name="com.nc.edu.fapi.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\5sem\NC\fakegram\backend\src\main\java\com\nc\edu\backend\dto" />
       <recent name="D:\5sem\NC\fakegram\frontend\src\app\service" />
       <recent name="D:\5sem\NC\fakegram\fapi\src\main\java\com\nc\edu\fapi" />
       <recent name="D:\5sem\NC\fakegram\fapi\src\main\java\com\nc\edu\fapi\models" />
       <recent name="D:\5sem\NC\fakegram\backend\src\main\java\com\nc\edu\backend\domain" />
-      <recent name="D:\5sem\NC\fakegram" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.nc.edu.backend.dto" />
-      <recent name="com.nc.edu.fapi.config" />
       <recent name="com.nc.edu.fapi.dto" />
+      <recent name="com.nc.edu.fapi.config" />
       <recent name="com.nc.edu.fapi.converter" />
       <recent name="com.nc.edu.fapi.controller" />
     </key>
@@ -760,6 +838,9 @@
       <workItem from="1577008423214" duration="20276000" />
       <workItem from="1577037364306" duration="10881000" />
       <workItem from="1577077885549" duration="25008000" />
+      <workItem from="1577187954947" duration="6282000" />
+      <workItem from="1577205908547" duration="50763000" />
+      <workItem from="1577344731800" duration="10522000" />
     </task>
     <task id="LOCAL-00001" summary="Some changes in controllers">
       <created>1576944900696</created>
@@ -779,7 +860,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="473658000" />
+    <option name="totallyTimeSpent" value="541225000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -801,18 +882,18 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.12147651" />
-      <window_info anchor="bottom" id="Run Dashboard" order="0" weight="0.1855524" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.12416107" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="0" visible="true" weight="0.3753541" />
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" visible="true" weight="0.21529745" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.18130311" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.22237961" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2407932" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3201133" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3286119" />
@@ -827,10 +908,10 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.3295302" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3295302" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3295302" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -840,12 +921,12 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.12147651" />
-      <window_info anchor="bottom" id="Run Dashboard" order="0" visible="true" weight="0.1855524" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.12416107" />
+      <window_info anchor="bottom" id="Run Dashboard" order="0" weight="0.3753541" />
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" visible="true" weight="0.21529745" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.22237961" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.18130311" />
+      <window_info anchor="bottom" id="Run" order="4" visible="true" weight="0.22237961" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -866,10 +947,10 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.3295302" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3295302" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3295302" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -915,39 +996,63 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java</url>
-          <line>67</line>
+          <line>68</line>
           <properties />
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java</url>
-          <line>77</line>
-          <properties />
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java</url>
-          <line>162</line>
+          <line>216</line>
           <properties />
           <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java</url>
-          <line>73</line>
-          <properties />
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java</url>
-          <line>84</line>
-          <properties />
-          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/UserService.java</url>
           <line>116</line>
           <properties />
           <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/LikeService.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java</url>
+          <line>106</line>
+          <properties />
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java</url>
+          <line>112</line>
+          <properties />
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java</url>
+          <line>152</line>
+          <properties />
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java</url>
+          <line>134</line>
+          <properties />
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java</url>
+          <line>118</line>
+          <properties />
+          <option name="timeStamp" value="125" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -966,359 +1071,17 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/subscribers-subscriptions/subscribers-subscriptions.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/user-service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="174" column="3" lean-forward="true" selection-start-line="174" selection-start-column="3" selection-end-line="174" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.ts">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Model/LikeOrDislike.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/MyUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="929">
-          <caret line="107" column="31" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="31" />
-          <folding>
-            <element signature="e#2251#2252#0" expanded="true" />
-            <element signature="e#2295#2296#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2584">
-          <caret line="152" column="39" lean-forward="true" selection-start-line="152" selection-start-column="39" selection-end-line="152" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/UserPageDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#430#431#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#661#662#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Model/userModel.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Model/user-page-dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/ImageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/config/MVCConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="62" column="81" lean-forward="true" selection-start-line="62" selection-start-column="81" selection-end-line="62" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/config/MVCConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/subscribtion-window/subscribtion-window.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/subscribtion-window/subscribtion-window.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="84" column="39" selection-start-line="84" selection-start-column="39" selection-end-line="84" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepoistory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/subscribers-window/subscribers-window.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" selection-start-column="32" selection-end-column="32" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/subscribers-window/subscribers-window.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/post/post.component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/subscribers-window/subscribers-window.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="49" column="2" lean-forward="true" selection-start-line="49" selection-start-column="2" selection-end-line="53" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/models/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Model/PostPageDto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Model/comment-page-dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/TokenProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/ImageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="42" column="49" lean-forward="true" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/post.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="96" column="1" lean-forward="true" selection-start-line="96" selection-start-column="1" selection-end-line="99" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="85" lean-forward="true" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/post/post.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1329,44 +1092,441 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/JwtAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="56" column="112" selection-start-line="56" selection-start-column="112" selection-end-line="56" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Model/comment-model.ts">
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/config/MVCConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.ts">
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/config/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        <state relative-caret-position="272">
+          <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/comment.service.ts">
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/LikeOrDislikeDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="33" column="71" lean-forward="true" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1355#1356#0" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/HashTagRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="72" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/LikeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/LikeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/LikeOrDislike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/converter/Converter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="81" column="21" lean-forward="true" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/LikeOrDislikeDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1450#1451#0" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1537#1538#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+            <element signature="e#1634#1635#0" expanded="true" />
+            <element signature="e#1688#1689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/LikeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="24" column="132" selection-start-line="24" selection-start-column="132" selection-end-line="24" selection-end-column="132" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/like-dislike.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="91" lean-forward="true" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="91" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/LikeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/TokenProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="35" column="87" lean-forward="true" selection-start-line="35" selection-start-column="87" selection-end-line="42" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1217">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/models/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/registration/registration.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="54" column="58" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Model/postModel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/LikeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/models/LikeOrDislike.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/models/HashTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="149" column="33" selection-start-line="149" selection-start-column="33" selection-end-line="149" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/HashTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/Post.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="89" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/models/Claim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/post/post.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Model/claim-model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/ClaimDto.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/post/post.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="1559">
+          <caret line="217" column="28" lean-forward="true" selection-start-line="217" selection-start-column="28" selection-end-line="217" selection-end-column="28" />
           <folding>
-            <element signature="e#0#68#0" expanded="true" />
+            <element signature="e#0#55#0" expanded="true" />
+            <element signature="e#366#432#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="113" lean-forward="true" selection-start-line="7" selection-start-column="113" selection-end-line="7" selection-end-column="125" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/ClaimDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="99" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
+          <folding>
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#808#809#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/post.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="114" column="61" lean-forward="true" selection-start-line="114" selection-start-column="45" selection-end-line="114" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/PostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="110" column="78" selection-start-line="110" selection-start-column="73" selection-end-line="110" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="90" column="60" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="60" />
+          <folding>
+            <element signature="e#2640#2641#0" expanded="true" />
+            <element signature="e#2685#2686#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="73" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/ClaimRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+          <folding>
+            <element signature="e#1021#1037#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/SecurityJwtConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
         </state>
       </provider>
     </entry>

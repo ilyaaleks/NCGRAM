@@ -31,6 +31,14 @@ public class Post {
         this.date = date;
         this.hashTags = hashTags;
     }
+    public Post(long postId,String authorLogin, String photoPath, String text, Date date, Set<HashTag> hashTags) {
+        this.authorLogin = authorLogin;
+        this.photoPath = photoPath;
+        this.text = text;
+        this.date = date;
+        this.hashTags = hashTags;
+        this.id=postId;
+    }
 
     public Set<HashTag> getHashTags() {
         return hashTags;

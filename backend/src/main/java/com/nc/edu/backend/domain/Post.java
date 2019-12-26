@@ -23,7 +23,7 @@ public class Post {
     private Set<Claim> claims;
     @ManyToMany(mappedBy = "posts",cascade = CascadeType.ALL, fetch=FetchType.EAGER)
     private Set<HashTag> hashTags;
-    @OneToMany(mappedBy = "postComment",cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
+    @OneToMany(mappedBy = "postComment",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Set<Comment> comments;
     @OneToMany(mappedBy = "post",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private Set<LikeOrDislike> likeOrDislikes;

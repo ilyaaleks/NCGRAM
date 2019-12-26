@@ -12,6 +12,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.ws.Response;
+
 //AuthenticationController has API exposed to generate JWT token
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -35,5 +37,12 @@ public class AuthenticationController {
         SecurityContextHolder.getContext().setAuthentication(authentication);
         final String token = tokenProvider.generateToken(authentication);
         return ResponseEntity.ok(new AuthToken(token));
+    }
+
+    @PostMapping("/logout")
+    public ResponseEntity logout()
+    {
+        SecurityContextHolder.getContext().setAuthentication(null);
+        return ResponseEntity.ok(null);
     }
 }
