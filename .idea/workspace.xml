@@ -5,69 +5,176 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c67afe2-394c-43d0-8a4a-baff87901ee4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/LikeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/ClaimDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/CommentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/CommentPageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/LikeOrDislikeDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/ClaimRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/LikeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/LikeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/LikeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/ClaimDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/CommentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/CommentPageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/LikeOrDislikeDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/LikeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/converter/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/converter/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/LikeOrDislike.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/LikeOrDislike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/converter/Converter.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/converter/Converter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/domain/LikeOrDislike.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/domain/LikeOrDislike.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/domain/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/domain/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/repository/CommentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/nc/edu/backend/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/converter/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/converter/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/models/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/SecurityJwtConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/SecurityJwtConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/controller/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/controller/AuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/models/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/models/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/about-user/about-user.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/comment/comment.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/015cb269-3379-4a18-a4f5-2d7e81d0b8ad.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/01613a79-0fd3-4a4c-9087-7ca6b2422b85.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/046d041b-feca-45ce-9140-9f49c47d7c04.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/05656b9a-8391-445e-89fe-9335f6e13690.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/060bdca9-83cd-41d2-85e1-5d6708d6a306.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/0a107af2-a073-46ed-9a4d-ec5302f17f24.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/0d5b9323-e1ea-4df1-be4b-3e2fc219cb44.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/12dd1515-04d9-4a23-b01c-36af8a95a660.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/15caa04a-42ae-415d-865d-2be828844abc.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/1cfc12ad-15ad-4915-b6d5-a93434381765.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/1f5a0c24-e92d-43d4-ad42-f67796f126ed.Instagram400x230.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/23f4efdc-a7cc-4721-ae23-932013ed7f9d.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/27396546-48ed-46a2-bd8e-88fc86ac66b5.53962894.9lmd9qm8hq.W665.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/280c4f66-47c0-49ff-9192-ac20d0839820.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/2a6fb1a0-ac37-46bd-8aef-04b4843d02af.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/2acad682-2056-4797-ab09-75a7e01c52aa.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/2b476b36-a9d6-4054-ba45-085b4fd51c6d.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/2c924de4-295c-4efd-83d9-ea8383d5cb87.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/3093becd-3f1b-4088-af43-3dade0ee1dc5.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/33ed1ba2-0f56-4f0a-ad9d-c95fe17fd064.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/350c56e4-a4f4-4b91-9cb3-6e5efb37362e.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/3f10ea65-eb3f-4ed9-a69b-502b567d7ff6.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/40602f23-6e7d-43e0-8ea2-34bb6c54717b.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/420529eb-0b7b-48a0-a8c4-a3181261ddae.6efc710a1d5a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/4238aa63-1d4a-42dc-803a-05c6a925f593.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/44737089-d42c-4e48-bb3c-b6336d2e665c.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/4528dbc0-dfdf-4389-861e-ea25f873521c.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/453204da-ca8b-435b-ba0c-0f20878c8e65.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/4607e012-3590-44fa-85f4-877994f1b22c.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/4a085e04-4464-412f-b3f5-a36ecd27a052.6efc710a1d5a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/4f3662c4-d3b1-407c-9c16-87167cf71690.6efc710a1d5a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/5772e563-68ab-4b02-bece-4f21e5e027a3.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/5cac486e-5764-4cc3-8fac-6d01d05748d4.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/603a407d-fe5c-4c7b-90ac-8471673e3193.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/6192b975-fae5-4448-baeb-22e37eb169ac.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/620d7e85-555a-40ce-8a14-5e6fe9137dee.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/63e1e48f-a714-471b-9abf-24f76ad0c42b.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/64196de5-a426-4ab6-99ed-118f39757b60.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/6575ffb7-37c3-4c27-b3c4-9f35de5f6378.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/6578fd8c-f129-4f4d-ac36-03ee0dd0ad8f.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/68404469-c6a4-447c-b55a-116f22df0cf3.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/68c702b6-187b-4d04-819d-5c97b9df91fd.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/6a3cada9-eafe-4658-8718-bb904728627a.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/6a7f6c54-2297-4721-9ff5-455cf9b5b739.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/71006407-e2ed-4c3b-9f3c-097449356119.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/71aae13e-d19f-4f98-bc50-2d517dd40a1b.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/725e5995-1f30-40d1-a04c-f3f84915f48d.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/77481556-77ff-487e-a487-0427d49b945d.6efc710a1d5a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/7d1b6c19-5dc2-4d90-a756-319286ca465d.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/7da83c37-d79a-4a5c-9741-6cc8c32d1823.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/7e5366aa-afbb-4f55-ba01-f9fabb1927d7.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/805d92f7-2bb6-40ec-9dda-50394075c3bb.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/81411232-a529-4818-9860-e65d2294ec57.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/82c92376-9529-4a75-b3a2-0ad36ab4572c.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/835bc2a2-846e-4b35-be0c-318f16ae4954.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/8546c86d-192b-447d-a521-2be5c589f385.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/85d1af3b-d48b-40ca-b9a4-4b39aecfa2c6.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/860ed8cc-81e2-4954-90ac-e7e6666d2463.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/897bd79c-63b0-4d04-a132-22c0c23ace1e.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/8a3c046a-af67-4c01-b32f-4877ce7a9c83.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/8b7c5524-76c3-4791-bc90-307886e490b9.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/8e70c9ca-8e0c-4b52-993b-9aea6d5b0280.6efc710a1d5a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/921ad49a-a9c2-4647-b1e5-e36e018c580c.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/940e3663-be5f-42f3-9c6d-b7433d52d431.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/95fa64c1-0fa2-4311-802c-686767714567.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/993e8ebd-9229-4d3e-8128-cae984f44f00.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/a42894df-e494-4755-a8c9-3807c73a0cf9.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/a5cea530-6d43-4f49-b155-103f76d19a6a.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/af618f95-b437-412e-8978-3b4efff13457.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/b3289460-f8aa-4ddf-a4b2-88f56736ee5f.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/b81b6cf0-2cd9-4615-a5a6-26780d97f506.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/bb3042e4-3b41-4501-9a47-81d7043fcfbd.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/bbb760e8-1bd5-4282-9c60-36e20e14a4f3.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/bbbd09c4-29c7-4170-86ef-fce85ecfb64c.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/c3d1971d-4798-4e5c-bb22-45fca580dad7.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/c898c351-f3d8-4602-84a0-6c392189d95f.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/d1d306d0-7131-49b1-a876-ea5a0f74f06a.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/d88a7db8-efdd-4df8-8430-426057493a89.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/e38ea4d6-c348-4c6c-bb3a-bdc51291df39.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/f4739c72-71d9-4992-9237-e82343255b69.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/f48bcb17-388e-4e21-8aa6-c3c5c2d15e6a.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/fb46ee52-a73c-400b-a803-c6b3f6f74f64.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/images/fefec306-8120-4a42-872d-2980887da358.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/015cb269-3379-4a18-a4f5-2d7e81d0b8ad.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/01613a79-0fd3-4a4c-9087-7ca6b2422b85.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/046d041b-feca-45ce-9140-9f49c47d7c04.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/05656b9a-8391-445e-89fe-9335f6e13690.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/060bdca9-83cd-41d2-85e1-5d6708d6a306.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/0a107af2-a073-46ed-9a4d-ec5302f17f24.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/0d5b9323-e1ea-4df1-be4b-3e2fc219cb44.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/12dd1515-04d9-4a23-b01c-36af8a95a660.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/15caa04a-42ae-415d-865d-2be828844abc.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/1cfc12ad-15ad-4915-b6d5-a93434381765.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/1f5a0c24-e92d-43d4-ad42-f67796f126ed.Instagram400x230.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/23f4efdc-a7cc-4721-ae23-932013ed7f9d.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/27396546-48ed-46a2-bd8e-88fc86ac66b5.53962894.9lmd9qm8hq.W665.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/280c4f66-47c0-49ff-9192-ac20d0839820.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/2a6fb1a0-ac37-46bd-8aef-04b4843d02af.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/2acad682-2056-4797-ab09-75a7e01c52aa.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/2b476b36-a9d6-4054-ba45-085b4fd51c6d.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/2c924de4-295c-4efd-83d9-ea8383d5cb87.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/3093becd-3f1b-4088-af43-3dade0ee1dc5.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/33ed1ba2-0f56-4f0a-ad9d-c95fe17fd064.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/350c56e4-a4f4-4b91-9cb3-6e5efb37362e.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/3f10ea65-eb3f-4ed9-a69b-502b567d7ff6.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/40602f23-6e7d-43e0-8ea2-34bb6c54717b.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/420529eb-0b7b-48a0-a8c4-a3181261ddae.6efc710a1d5a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/4238aa63-1d4a-42dc-803a-05c6a925f593.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/44737089-d42c-4e48-bb3c-b6336d2e665c.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/4528dbc0-dfdf-4389-861e-ea25f873521c.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/453204da-ca8b-435b-ba0c-0f20878c8e65.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/4607e012-3590-44fa-85f4-877994f1b22c.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/4a085e04-4464-412f-b3f5-a36ecd27a052.6efc710a1d5a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/4f3662c4-d3b1-407c-9c16-87167cf71690.6efc710a1d5a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/5772e563-68ab-4b02-bece-4f21e5e027a3.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/5cac486e-5764-4cc3-8fac-6d01d05748d4.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/603a407d-fe5c-4c7b-90ac-8471673e3193.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/6192b975-fae5-4448-baeb-22e37eb169ac.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/620d7e85-555a-40ce-8a14-5e6fe9137dee.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/63e1e48f-a714-471b-9abf-24f76ad0c42b.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/64196de5-a426-4ab6-99ed-118f39757b60.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/6575ffb7-37c3-4c27-b3c4-9f35de5f6378.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/6578fd8c-f129-4f4d-ac36-03ee0dd0ad8f.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/68404469-c6a4-447c-b55a-116f22df0cf3.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/68c702b6-187b-4d04-819d-5c97b9df91fd.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/6a3cada9-eafe-4658-8718-bb904728627a.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/6a7f6c54-2297-4721-9ff5-455cf9b5b739.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/71006407-e2ed-4c3b-9f3c-097449356119.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/71aae13e-d19f-4f98-bc50-2d517dd40a1b.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/725e5995-1f30-40d1-a04c-f3f84915f48d.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/77481556-77ff-487e-a487-0427d49b945d.6efc710a1d5a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/7d1b6c19-5dc2-4d90-a756-319286ca465d.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/7da83c37-d79a-4a5c-9741-6cc8c32d1823.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/7e5366aa-afbb-4f55-ba01-f9fabb1927d7.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/805d92f7-2bb6-40ec-9dda-50394075c3bb.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/81411232-a529-4818-9860-e65d2294ec57.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/82c92376-9529-4a75-b3a2-0ad36ab4572c.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/835bc2a2-846e-4b35-be0c-318f16ae4954.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/8546c86d-192b-447d-a521-2be5c589f385.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/85d1af3b-d48b-40ca-b9a4-4b39aecfa2c6.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/860ed8cc-81e2-4954-90ac-e7e6666d2463.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/897bd79c-63b0-4d04-a132-22c0c23ace1e.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/8a3c046a-af67-4c01-b32f-4877ce7a9c83.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/8b7c5524-76c3-4791-bc90-307886e490b9.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/8e70c9ca-8e0c-4b52-993b-9aea6d5b0280.6efc710a1d5a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/921ad49a-a9c2-4647-b1e5-e36e018c580c.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/940e3663-be5f-42f3-9c6d-b7433d52d431.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/95fa64c1-0fa2-4311-802c-686767714567.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/993e8ebd-9229-4d3e-8128-cae984f44f00.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/a42894df-e494-4755-a8c9-3807c73a0cf9.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/a5cea530-6d43-4f49-b155-103f76d19a6a.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/af618f95-b437-412e-8978-3b4efff13457.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/b3289460-f8aa-4ddf-a4b2-88f56736ee5f.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/b81b6cf0-2cd9-4615-a5a6-26780d97f506.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/bb3042e4-3b41-4501-9a47-81d7043fcfbd.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/bbb760e8-1bd5-4282-9c60-36e20e14a4f3.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/bbbd09c4-29c7-4170-86ef-fce85ecfb64c.84608722-352-k886345.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/c3d1971d-4798-4e5c-bb22-45fca580dad7.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/c898c351-f3d8-4602-84a0-6c392189d95f.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/d1d306d0-7131-49b1-a876-ea5a0f74f06a.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/d88a7db8-efdd-4df8-8430-426057493a89.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/e38ea4d6-c348-4c6c-bb3a-bdc51291df39.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/f4739c72-71d9-4992-9237-e82343255b69.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/f48bcb17-388e-4e21-8aa6-c3c5c2d15e6a.1508101437141939217.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/fb46ee52-a73c-400b-a803-c6b3f6f74f64.thumbnail-instagram-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/images/fefec306-8120-4a42-872d-2980887da358.Image00008-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/security/SecurityJwtConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/security/SecurityJwtConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/security/TokenProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/target/classes/com/nc/edu/fapi/security/TokenProvider.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Model/comment-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Model/comment-model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/Model/comment-page-dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/Model/comment-page-dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/comment.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/post.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/post.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/backend/target/" />
@@ -93,107 +200,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="118" selection-start-line="118" selection-end-line="118" />
-              <folding>
-                <element signature="e#1021#1037#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/SecurityJwtConstants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/PostService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="110" column="78" selection-start-line="110" selection-start-column="73" selection-end-line="110" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="90" column="60" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="60" />
-              <folding>
-                <element signature="e#2640#2641#0" expanded="true" />
-                <element signature="e#2685#2686#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/service/post.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="114" column="61" lean-forward="true" selection-start-line="114" selection-start-column="45" selection-end-line="114" selection-end-column="61" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/ClaimDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="15" column="99" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
-              <folding>
-                <element signature="e#253#254#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#312#313#0" expanded="true" />
-                <element signature="e#340#341#0" expanded="true" />
-                <element signature="e#371#372#0" expanded="true" />
-                <element signature="e#400#401#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#478#479#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-                <element signature="e#534#535#0" expanded="true" />
-                <element signature="e#572#573#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-                <element signature="e#666#667#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-                <element signature="e#746#747#0" expanded="true" />
-                <element signature="e#779#780#0" expanded="true" />
-                <element signature="e#808#809#0" expanded="true" />
-                <element signature="e#852#853#0" expanded="true" />
-                <element signature="e#888#889#0" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
-                <element signature="e#952#953#0" expanded="true" />
-                <element signature="e#998#999#0" expanded="true" />
-                <element signature="e#1038#1039#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -211,6 +218,7 @@
       <find>starter</find>
       <find>starter-we</find>
       <find>sec</find>
+      <find>login</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,12 +227,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/AuthenticationController.java" />
-        <option value="$PROJECT_DIR$/frontend/src/app/service/auth.service.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Model/comment-model.ts" />
-        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/converter/Converter.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/CommentDto.java" />
         <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/CommentDto.java" />
         <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/CommentController.java" />
@@ -257,7 +259,6 @@
         <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/Post.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java" />
         <option value="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/Model/claim-model.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/Components/post/post.component.ts" />
@@ -270,6 +271,13 @@
         <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/ClaimRepository.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java" />
         <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/SecurityJwtConstants.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.html" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/service/user-service.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/registration/registration.component.html" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.ts" />
       </list>
     </option>
   </component>
@@ -316,6 +324,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -418,6 +427,14 @@
               <item name="backend" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fakegram" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
@@ -646,6 +663,15 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="story-item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fakegram" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fakegram" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Guards" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -669,7 +695,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -679,7 +704,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577357405180" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577369667549" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="D:/sweater" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -689,7 +714,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="D:\5sem\NC\fakegram\frontend\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -840,7 +865,8 @@
       <workItem from="1577077885549" duration="25008000" />
       <workItem from="1577187954947" duration="6282000" />
       <workItem from="1577205908547" duration="50763000" />
-      <workItem from="1577344731800" duration="10522000" />
+      <workItem from="1577344731800" duration="12199000" />
+      <workItem from="1577361474781" duration="8212000" />
     </task>
     <task id="LOCAL-00001" summary="Some changes in controllers">
       <created>1576944900696</created>
@@ -856,11 +882,18 @@
       <option name="project" value="LOCAL" />
       <updated>1577079660530</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bug fixing">
+      <created>1577357598383</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577357598383</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="541225000" />
+    <option name="totallyTimeSpent" value="551114000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -873,7 +906,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
@@ -882,8 +914,8 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.12416107" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="0" visible="true" weight="0.3753541" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.17516778" />
+      <window_info anchor="bottom" id="Run Dashboard" order="0" visible="true" weight="0.04249292" />
       <window_info anchor="bottom" id="Inspection Results" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.18130311" />
@@ -893,7 +925,7 @@
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3201133" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3186969" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3286119" />
@@ -1001,12 +1033,6 @@
           <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java</url>
-          <line>216</line>
-          <properties />
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/UserService.java</url>
           <line>116</line>
           <properties />
@@ -1054,6 +1080,12 @@
           <properties />
           <option name="timeStamp" value="125" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java</url>
+          <line>215</line>
+          <properties />
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -1071,165 +1103,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Model/LikeOrDislike.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/MyUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="41" lean-forward="true" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/JwtAuthenticationEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/config/MVCConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/dto/LikeOrDislikeDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1355#1356#0" expanded="true" />
-            <element signature="e#1390#1391#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-            <element signature="e#1491#1492#0" expanded="true" />
-            <element signature="e#1530#1531#0" expanded="true" />
-            <element signature="e#1568#1569#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/HashTagRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="72" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/LikeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/LikeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/LikeOrDislike.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/converter/Converter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="81" column="21" lean-forward="true" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/dto/LikeOrDislikeDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1397#1398#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1498#1499#0" expanded="true" />
-            <element signature="e#1537#1538#0" expanded="true" />
-            <element signature="e#1575#1576#0" expanded="true" />
-            <element signature="e#1634#1635#0" expanded="true" />
-            <element signature="e#1688#1689#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/LikeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="24" column="132" selection-start-line="24" selection-start-column="132" selection-end-line="24" selection-end-column="132" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/like-dislike.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="91" lean-forward="true" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="91" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/LikeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/TokenProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="35" column="87" lean-forward="true" selection-start-line="35" selection-start-column="87" selection-end-line="42" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/activity/activity.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1247,26 +1120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
           <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/registration/registration.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="54" column="58" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1345,13 +1198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/domain/HashTag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-323">
@@ -1418,12 +1264,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.html">
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="113" lean-forward="true" selection-start-line="7" selection-start-column="113" selection-end-line="7" selection-end-column="125" />
+        <state relative-caret-position="68">
+          <caret line="9" column="73" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/ClaimRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/SecurityJwtConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/post.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="114" column="61" lean-forward="true" selection-start-line="114" selection-start-column="45" selection-end-line="114" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1461,72 +1331,182 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts">
+    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+        <state relative-caret-position="195">
+          <caret line="113" column="45" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/post.service.ts">
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/notifications/notifications.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="114" column="61" lean-forward="true" selection-start-line="114" selection-start-column="45" selection-end-line="114" selection-end-column="61" />
+        <state relative-caret-position="255">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/dialogwindow/dialogwindow.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="136" selection-start-line="7" selection-start-column="136" selection-end-line="7" selection-end-column="136" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="116" column="27" selection-start-line="116" selection-start-column="27" selection-end-line="116" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/navigation/navigation.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="14" selection-end-line="13" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/service/user-service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="167" column="49" selection-start-line="167" selection-start-column="49" selection-end-line="167" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/PostRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/service/impl/PostService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="212" column="35" selection-start-line="212" selection-start-column="35" selection-end-line="212" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/registration/registration.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/Components/registration/registration.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="62" column="55" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/config/MVCConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/ImageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/PostService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="110" column="78" selection-start-line="110" selection-start-column="73" selection-end-line="110" selection-end-column="78" />
+        <state relative-caret-position="108">
+          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/LikeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/service/ImageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/controller/PostController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="90" column="60" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="60" />
-          <folding>
-            <element signature="e#2640#2641#0" expanded="true" />
-            <element signature="e#2685#2686#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="243">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/CommentRepository.java">
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/JwtAuthenticationEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="73" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="73" />
+        <state relative-caret-position="135">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/repository/ClaimRepository.java">
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/JwtAuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/nc/edu/backend/controller/PostController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
-          <folding>
-            <element signature="e#1021#1037#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/nc/edu/fapi/security/SecurityJwtConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+        <state relative-caret-position="314">
+          <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
         </state>
       </provider>
     </entry>
